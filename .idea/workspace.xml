@@ -41,8 +41,8 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#503#504#0" expanded="true" />
                 <element signature="e#534#535#0" expanded="true" />
-                <marker date="1533758360987" expanded="true" signature="4383:4404" ph="SELECT * FRO... Clients" />
-                <marker date="1533758360987" expanded="true" signature="4383:4448" ph="SELECT * FRO... Clients" />
+                <marker date="1533761112867" expanded="true" signature="4383:4404" ph="SELECT * FRO... Clients" />
+                <marker date="1533761112867" expanded="true" signature="4383:4448" ph="SELECT * FRO... Clients" />
               </folding>
             </state>
           </provider>
@@ -181,7 +181,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="974" />
@@ -644,7 +644,7 @@
       <workItem from="1533284860030" duration="10335000" />
       <workItem from="1533410506280" duration="590000" />
       <workItem from="1533563115159" duration="588000" />
-      <workItem from="1533748961271" duration="9860000" />
+      <workItem from="1533748961271" duration="10450000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1533758420274</created>
@@ -689,7 +689,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170378000" />
+    <option name="totallyTimeSpent" value="170968000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -701,8 +701,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
@@ -722,7 +721,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32897604" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16151386" />
@@ -1206,8 +1205,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#503#504#0" expanded="true" />
             <element signature="e#534#535#0" expanded="true" />
-            <marker date="1533758360987" expanded="true" signature="4383:4404" ph="SELECT * FRO... Clients" />
-            <marker date="1533758360987" expanded="true" signature="4383:4448" ph="SELECT * FRO... Clients" />
+            <marker date="1533761112867" expanded="true" signature="4383:4404" ph="SELECT * FRO... Clients" />
+            <marker date="1533761112867" expanded="true" signature="4383:4448" ph="SELECT * FRO... Clients" />
           </folding>
         </state>
       </provider>
