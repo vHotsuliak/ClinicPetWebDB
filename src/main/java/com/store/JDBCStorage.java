@@ -86,6 +86,10 @@ public class JDBCStorage implements Storage {
 
     }
 
+    /**
+     * Return list of all clients.
+     * @return list of all clients.
+     */
     @Override
     public Collection<Client> values() {
         final List<Client> clients = new ArrayList<>();
@@ -101,12 +105,21 @@ public class JDBCStorage implements Storage {
         return clients;
     }
 
+    /**
+     * Add one client to database.
+     * @param client contains client's id, name and pet.
+     */
     @Override
     public void add(Client client) {
         addPet(new Client(createID(client), client.getClientName(),
                 createPet(client.getKindOfPet(), client.getPetName())));
     }
 
+    /**
+     * Create id for this client in database. Return client id in database.
+     * @param client contains client data.
+     * @return client id in database.
+     */
     private int createID(Client client) {
         try(final PreparedStatement statement = this.connection.prepareStatement(INSERT_CLIENT)) {
             AtomicInteger ids = new AtomicInteger(idsClint.incrementAndGet());
@@ -121,6 +134,10 @@ public class JDBCStorage implements Storage {
         throw new IllegalStateException("Could not create new user");
     }
 
+    /**
+     * Create pet in database which is connected with this client.
+     * @param client contains client data include pet.
+     */
     private void addPet(Client client) {
         try(final PreparedStatement statement = this.connection.prepareStatement(INSERT_PET)) {
             AtomicInteger ids = new AtomicInteger(idsPet.incrementAndGet());
@@ -137,6 +154,10 @@ public class JDBCStorage implements Storage {
         throw new IllegalStateException("Could not create new pet");
     }
 
+    /**
+     * Editing client data in database, also editing pet data in database.
+     * @param client contains client data include pet.
+     */
     @Override
     public void edit(Client client) {
         try(final PreparedStatement statement = this.connection.prepareStatement(UPDATE_CLIENT)) {
@@ -157,12 +178,20 @@ public class JDBCStorage implements Storage {
         }
     }
 
+    /**
+     * Deleting client and his pet.
+     * @param id client id
+     */
     @Override
     public void delete(int id) {
         deletePet(id);
         deleteClient(id);
     }
 
+    /**
+     * Deleting client from a database.
+     * @param id client id
+     */
     private void deleteClient(int id) {
         try(final PreparedStatement statement = this.connection.prepareStatement(DELETE_CLIENT)) {
             statement.setInt(1, id);
@@ -175,6 +204,10 @@ public class JDBCStorage implements Storage {
         throw new IllegalStateException("Could not delete client");
     }
 
+    /**
+     * Deleting client's pet from a database.
+     * @param id client id.
+     */
     private void deletePet(int id) {
         try(final PreparedStatement statement = this.connection.prepareStatement(DELETE_PET)) {
             statement.setInt(1, id);
@@ -187,6 +220,11 @@ public class JDBCStorage implements Storage {
         throw new IllegalStateException("Could not delete pet");
     }
 
+    /**
+     * Get client by his id.
+     * @param id client id.
+     * @return client which have this id. If client with this id isn't exist then return null.
+     */
     @Override
     public Client get(int id) {
         Client client = null;
@@ -203,6 +241,13 @@ public class JDBCStorage implements Storage {
         }
     }
 
+    /**
+     * Choosing way to searching clients. Return list of clients with these parameters.
+     * @param clientName contains client's name.
+     * @param petName contains pet's name.
+     * @param kindOfPet contains kind of pet
+     * @return list of clients with these parameters.
+     */
     @Override
     public Collection<Client> searchClient(final String clientName, final String petName, final String kindOfPet) {
         List<Client> clients = new ArrayList<>();
@@ -220,12 +265,17 @@ public class JDBCStorage implements Storage {
         else if (!clientName.isEmpty() && petName.isEmpty() && !kindOfPet.isEmpty())
             clients = twoCondition(clientName, kindOfPet, SEARCH_CLIENT_BY_KIND_OF_PET_AND_CLIENT); // Client.user_nic = ?  And Pets.kind_of_pet = ?
         else if (!clientName.isEmpty() && !petName.isEmpty() && !kindOfPet.isEmpty())
-            clients = threeCondition(clientName, petName, kindOfPet, SEARCH_CLIENT_BY_PET_AND_CLIENT); // Client.user_nic = ?  And Pets.kind_of_pet = ?
+            clients = threeCondition(clientName, petName, kindOfPet); // Client.user_nic = ?  And Pets.kind_of_pet = ?
         return clients;
     }
 
 
-
+    /**
+     * Searching clients by one parameter.
+     * @param condition1 1st condition.
+     * @param SQLSearchRequest contains SQL search request with one parameter.
+     * @return list of clients with this parameter.
+     */
     private List<Client> oneCondition(final String condition1, final String SQLSearchRequest) {
         final List<Client> clients = new ArrayList<>();
         try(final PreparedStatement statement = this.connection.prepareStatement(SQLSearchRequest)) {
@@ -240,6 +290,13 @@ public class JDBCStorage implements Storage {
         return clients;
     }
 
+    /**
+     * Searching clients by two parameters.
+     * @param condition1 1st condition.
+     * @param condition2 2nd condition.
+     * @param SQLSearchRequest contains SQL search request with two parameters.
+     * @return list of clients with these parameters.
+     */
     private List<Client> twoCondition(String condition1, String condition2, String SQLSearchRequest) {
         final List<Client> clients = new ArrayList<>();
         try(final PreparedStatement statement = this.connection.prepareStatement(SQLSearchRequest)) {
@@ -255,9 +312,16 @@ public class JDBCStorage implements Storage {
         return clients;
     }
 
-    private List<Client> threeCondition(String condition1, String condition2, String condition3, String SQLSearchRequest) {
+    /**
+     * Searching clients by three parameters.
+     * @param condition1 1st condition.
+     * @param condition2 2nd condition.
+     * @param condition3 3rd condition.
+     * @return list of clients with these parameters.
+     */
+    private List<Client> threeCondition(String condition1, String condition2, String condition3) {
         final List<Client> clients = new ArrayList<>();
-        try(final PreparedStatement statement = this.connection.prepareStatement(SQLSearchRequest)) {
+        try(final PreparedStatement statement = this.connection.prepareStatement(SEARCH_CLIENT_BY_PET_AND_CLIENT)) {
             statement.setString(1, condition1);
             statement.setString(2, condition2);
             statement.setString(3, condition3);
@@ -271,8 +335,15 @@ public class JDBCStorage implements Storage {
         return clients;
     }
 
+    /**
+     * Return last client id.
+     * @return last client id.
+     */
     public int getLastId(){return this.idsClint.get();}
 
+    /**
+     * Close connection to database.
+     */
     @Override
     public void close() {
         try {
@@ -281,40 +352,4 @@ public class JDBCStorage implements Storage {
             e.printStackTrace();
         }
     }
-
-    /*
-    private List<Client> oneCondition(String clientName, String petName, String kindOfPet) {
-        final String condition = condition(clientName, petName, kindOfPet, 1);
-
-    }*/
-
-    /*
-     * Return i-th not null string parameter, if there aren't i-th parameter then null. Available 'i' is 1st or 2nd!!!
-     * @param clientName contains client name.
-     * @param petName contains pet name.
-     * @param kindOfPet contains kind of pet.
-     * @param i how mach parameters, at list, should be not null.
-     * @return i-th not zero string parameter. If there aren't i-th parameter then null.
-     *
-    private String condition(String clientName, String petName, String kindOfPet, int i) {
-        int counter = 1;
-
-        if (clientName != null)
-            if (i == counter)
-                return clientName;
-            else
-                counter++;
-        if (petName != null)
-            if (i == counter)
-                return petName;
-            else
-                counter++;
-        if (kindOfPet != null)
-            if (i == counter)
-                return kindOfPet;
-            else
-                counter++;
-
-        return null;
-    }*/
 }
