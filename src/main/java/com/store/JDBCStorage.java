@@ -47,7 +47,7 @@ public class JDBCStorage implements Storage {
     private final String SEARCH_CLIENT_BY_PET_AND_CLIENT_NAME     = "SELECT * FROM Clients JOIN Pets ON Clients.user_id=Pets.client_id And Clients.user_nic = ? And Pets.nic = ?";
     private final String SEARCH_CLIENT_BY_KIND_OF_PET_AND_CLIENT  = "SELECT * FROM Clients JOIN Pets ON Clients.user_id=Pets.client_id And Clients.user_nic = ?  And Pets.kind_of_pet = ?";
     // SQL request by three parameters
-    private final String SEARCH_CLIENT_BY_PET_AND_CLIENT          = "SELECT * FROM Clients JOIN Pets ON Clients.user_id=Pets.client_id And Client.user_nic = ? And Pets.nic = ? And Pets.kind_of_pet = ?";
+    private final String SEARCH_CLIENT_BY_PET_AND_CLIENT          = "SELECT * FROM Clients JOIN Pets ON Clients.user_id=Pets.client_id And Clients.user_nic = ? And Pets.nic = ? And Pets.kind_of_pet = ?";
 
     // -----SQL commands-----
 
@@ -219,7 +219,7 @@ public class JDBCStorage implements Storage {
             clients = twoCondition(petName, kindOfPet, SEARCH_CLIENT_BY_PET); // Pets.nic = ? And Pets.kind_of_pet = ?
         else if (!clientName.isEmpty() && petName.isEmpty() && !kindOfPet.isEmpty())
             clients = twoCondition(clientName, kindOfPet, SEARCH_CLIENT_BY_KIND_OF_PET_AND_CLIENT); // Client.user_nic = ?  And Pets.kind_of_pet = ?
-        else if (!clientName.isEmpty() && petName.isEmpty() && !kindOfPet.isEmpty())
+        else if (!clientName.isEmpty() && !petName.isEmpty() && !kindOfPet.isEmpty())
             clients = threeCondition(clientName, petName, kindOfPet, SEARCH_CLIENT_BY_PET_AND_CLIENT); // Client.user_nic = ?  And Pets.kind_of_pet = ?
         return clients;
     }
@@ -270,6 +270,7 @@ public class JDBCStorage implements Storage {
         }
         return clients;
     }
+
     public int getLastId(){return this.idsClint.get();}
 
     @Override

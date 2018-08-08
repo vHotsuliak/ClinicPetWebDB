@@ -6,7 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="" />
+    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/store/JDBCStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/store/JDBCStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/store/JDBCStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/store/JDBCStorage.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,14 +41,14 @@
       <file leaf-file-name="JDBCStorage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3296">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="167">
+              <caret line="263" selection-start-line="263" selection-end-line="263" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#503#504#0" expanded="true" />
                 <element signature="e#534#535#0" expanded="true" />
-                <marker date="1533299674338" expanded="true" signature="4295:4316" ph="SELECT * FRO... Clients" />
-                <marker date="1533299674338" expanded="true" signature="4295:4360" ph="SELECT * FRO... Clients" />
+                <marker date="1533751687788" expanded="true" signature="4295:4316" ph="SELECT * FRO... Clients" />
+                <marker date="1533751687788" expanded="true" signature="4295:4360" ph="SELECT * FRO... Clients" />
               </folding>
             </state>
           </provider>
@@ -147,6 +153,9 @@
       <find>JDBC</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -175,9 +184,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/servlets/SearchClientServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/store/ClientCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/store/UserCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/servlets/AVCDESClientServletsTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java" />
       </list>
     </option>
   </component>
@@ -245,6 +254,7 @@
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -350,6 +360,10 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebJDBC\src\main\webapp\js\client" />
+      <recent name="D:\Java\workspaceIntel\ClinicPetWebJDBC\src\main\webapp" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
       <recent name="" />
@@ -360,10 +374,6 @@
       <recent name="D:\Java\workspaceIntel\ClinicPetWebJDBC\src" />
       <recent name="D:\Java\workspaceIntel\ClinicPetWebJDBC\src\main\webapp\WEB-INF" />
       <recent name="D:\Java\workspaceIntel\ClinicPetWebJDBC\src\main" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebJDBC\src\main\webapp\js\client" />
-      <recent name="D:\Java\workspaceIntel\ClinicPetWebJDBC\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -694,7 +704,7 @@
       <workItem from="1533284860030" duration="10335000" />
       <workItem from="1533410506280" duration="590000" />
       <workItem from="1533563115159" duration="588000" />
-      <workItem from="1533748961271" duration="1561000" />
+      <workItem from="1533748961271" duration="2660000" />
     </task>
     <servers />
   </component>
@@ -731,7 +741,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162079000" />
+    <option name="totallyTimeSpent" value="163178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -756,9 +766,9 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16151386" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16151386" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -822,9 +832,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java</url>
-          <line>229</line>
+          <line>222</line>
           <properties />
-          <option name="timeStamp" value="49" />
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/servlets/AddClientServlet.java</url>
@@ -842,16 +852,8 @@
           </properties>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java</url>
-          <line>242</line>
-          <properties class="com.store.JDBCStorage" method="twoCondition">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="54" />
+      <option name="time" value="62" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1202,14 +1204,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3296">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="167">
+          <caret line="263" selection-start-line="263" selection-end-line="263" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#503#504#0" expanded="true" />
             <element signature="e#534#535#0" expanded="true" />
-            <marker date="1533299674338" expanded="true" signature="4295:4316" ph="SELECT * FRO... Clients" />
-            <marker date="1533299674338" expanded="true" signature="4295:4360" ph="SELECT * FRO... Clients" />
+            <marker date="1533751687788" expanded="true" signature="4295:4316" ph="SELECT * FRO... Clients" />
+            <marker date="1533751687788" expanded="true" signature="4295:4360" ph="SELECT * FRO... Clients" />
           </folding>
         </state>
       </provider>
