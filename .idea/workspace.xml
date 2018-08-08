@@ -6,146 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/Images/PagesBackground.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/Images/Yes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/models/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/models/CreatePet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/models/pets/Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/models/pets/Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/models/pets/Pet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/service/Settings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/servlets/AddClientServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/servlets/ClientViewServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/servlets/DeleteClientServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/servlets/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/servlets/EditClientServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/servlets/SearchClientServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/store/ClientCache$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/store/ClientCache$Check.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/store/ClientCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/store/JDBCStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/store/Storage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/com/store/UserCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/classes/parsentev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/lib/commons-lang-2.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/lib/plexus-utils-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/lib/postgresql-9.1-901.jdbc4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/lib/servlet-api-3.0-alpha-1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/lib/standard-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/css/Style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/views/client/AddClient.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/views/client/ClientView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/views/client/DeleteClient.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/views/client/EditClient.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ClinicPetWebJDBC/views/client/SearchClient.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/models/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/models/CreatePet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/models/pets/Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/models/pets/Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/models/pets/Pet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/Settings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlets/AddClientServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlets/ClientViewServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlets/DeleteClientServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlets/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlets/EditClientServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlets/SearchClientServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/ClientCache$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/ClientCache$Check.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/ClientCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/JDBCStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/Storage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/UserCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parsentev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/coverage-reports/jacoco-unit.exec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models.pets/Cat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models.pets/Cat.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models.pets/Dog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models.pets/Dog.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models.pets/Pet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models.pets/Pet.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models.pets/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models.pets/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models/Client.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models/Client.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models/CreatePet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models/CreatePet.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.models/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.service/Settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.service/Settings.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.service/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.service/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/AddClientServlet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/AddClientServlet.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/ClientViewServlet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/ClientViewServlet.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/DeleteClientServlet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/DeleteClientServlet.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/Demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/Demo.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/EditClientServlet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/EditClientServlet.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/SearchClientServlet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/SearchClientServlet.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.servlets/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.store/ClientCache$Check.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.store/ClientCache.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.store/ClientCache.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.store/JDBCStorage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.store/JDBCStorage.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.store/UserCache.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.store/UserCache.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.store/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.store/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/branchfc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/branchnc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/branchpc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/bundle.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/class.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/down.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/greenbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/group.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/method.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/package.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/redbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/report.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/report.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/session.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/sort.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/sort.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/source.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/up.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.models.ClientAndPetTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.servlets.AVCDESClientServletsTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.store.ClientCacheTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.models.ClientAndPetTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.servlets.AVCDESClientServletsTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.store.ClientCacheTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/models/ClientAndPetTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/servlets/AVCDESClientServletsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/store/ClientCacheTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -320,7 +181,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="974" />
@@ -783,7 +644,7 @@
       <workItem from="1533284860030" duration="10335000" />
       <workItem from="1533410506280" duration="590000" />
       <workItem from="1533563115159" duration="588000" />
-      <workItem from="1533748961271" duration="9340000" />
+      <workItem from="1533748961271" duration="9860000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1533758420274</created>
@@ -828,7 +689,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169858000" />
+    <option name="totallyTimeSpent" value="170378000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -840,7 +701,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
