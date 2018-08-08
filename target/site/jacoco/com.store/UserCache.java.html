@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserCache.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ClinicPetWebJDBC Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.store</a> &gt; <span class="el_source">UserCache.java</span></div><h1>UserCache.java</h1><pre class="source lang-java linenums">package com.store;
+
+import com.models.Client;
+
+import java.util.Collection;
+
+<span class="fc" id="L7">public class UserCache implements Storage{</span>
+<span class="fc" id="L8">    public static final UserCache INSTANCE = new UserCache();</span>
+
+
+
+<span class="fc" id="L12">    private final Storage storage = new JDBCStorage();</span>
+
+    public static UserCache getInstance(){
+<span class="fc" id="L15">        return INSTANCE;</span>
+    }
+
+
+    @Override
+    public int getLastId() {
+<span class="fc" id="L21">        return this.storage.getLastId();</span>
+    }
+
+    @Override
+    public Collection&lt;Client&gt; values() {
+<span class="fc" id="L26">        return this.storage.values();</span>
+    }
+
+    @Override
+    public void add(Client client) {
+<span class="fc" id="L31">        this.storage.add(client);</span>
+<span class="fc" id="L32">    }</span>
+
+    @Override
+    public void edit(Client client) {
+<span class="fc" id="L36">        this.storage.edit(client);</span>
+<span class="fc" id="L37">    }</span>
+
+    @Override
+    public void delete(int id) {
+<span class="fc" id="L41">        this.storage.delete(id);</span>
+<span class="fc" id="L42">    }</span>
+
+    @Override
+    public Client get(int id) {
+<span class="fc" id="L46">        return this.storage.get(id);</span>
+    }
+
+    @Override
+    public Collection&lt;Client&gt; searchClient(String clientName, String petName, String kindOfPet) {
+<span class="nc" id="L51">        return this.storage.searchClient(clientName, petName, kindOfPet);</span>
+    }
+
+    @Override
+    public void close() {
+<span class="nc" id="L56">        this.storage.close();</span>
+<span class="nc" id="L57">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>

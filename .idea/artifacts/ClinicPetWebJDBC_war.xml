@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ClinicPetWebJDBC:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="ClinicPetWebJDBC.war">
+      <element id="artifact" artifact-name="ClinicPetWebJDBC:war exploded" />
+    </root>
+  </artifact>
+</component>

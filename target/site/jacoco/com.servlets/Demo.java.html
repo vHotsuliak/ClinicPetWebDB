@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Demo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ClinicPetWebJDBC Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.servlets</a> &gt; <span class="el_source">Demo.java</span></div><h1>Demo.java</h1><pre class="source lang-java linenums">package com.servlets;
+
+import com.models.Client;
+import com.models.pets.Cat;
+import com.models.pets.Dog;
+import com.models.pets.Pet;
+import com.service.Settings;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Collection;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class Demo {
+<span class="nc" id="L17">    final Settings settings = Settings.getInstance();</span>
+<span class="nc" id="L18">    private final AtomicInteger ids = new AtomicInteger();</span>
+    private final Connection connection;
+    // SQL commands
+<span class="nc" id="L21">    String insertClient = &quot;INSERT into Clients VALUES ( ?, ? )&quot;;</span>
+
+<span class="nc" id="L23">    String insertPet = &quot;INSERT into Pets VALUES ( ?, ?, ?, ? )&quot;;</span>
+
+
+<span class="nc" id="L26">    public Demo() {</span>
+<span class="nc" id="L27">        final Settings settings = Settings.getInstance();</span>
+
+        try {
+<span class="nc" id="L30">            this.connection = DriverManager.getConnection(settings.value(</span>
+<span class="nc" id="L31">                    &quot;jdbc.url&quot;), settings.value(&quot;jdbc.username&quot;), settings.value(&quot;jdbc.password&quot;));</span>
+<span class="nc" id="L32">        }catch (SQLException e) {</span>
+<span class="nc" id="L33">            throw new IllegalStateException(e);</span>
+<span class="nc" id="L34">        }</span>
+
+        try {
+<span class="nc" id="L37">            Class.forName(settings.value(&quot;jdbc.driver_class&quot;));</span>
+<span class="nc" id="L38">        } catch (ClassNotFoundException e) {</span>
+<span class="nc" id="L39">            e.printStackTrace();</span>
+<span class="nc" id="L40">        }</span>
+<span class="nc" id="L41">    }</span>
+
+    private void addClient(Client client) {
+<span class="nc" id="L44">        try(final PreparedStatement statement = this.connection.prepareStatement(insertClient)) {</span>
+<span class="nc" id="L45">            statement.setInt(1, client.getId());</span>
+<span class="nc" id="L46">            statement.setString(2, client.getClientName());</span>
+<span class="nc" id="L47">            statement.executeUpdate();</span>
+<span class="nc" id="L48">            addPet(client);</span>
+<span class="nc" id="L49">        } catch (SQLException e) {</span>
+<span class="nc" id="L50">            e.printStackTrace();</span>
+<span class="nc" id="L51">        }</span>
+<span class="nc" id="L52">    }</span>
+
+    private void addPet(Client client) {
+<span class="nc" id="L55">        try(final PreparedStatement statement = this.connection.prepareStatement(insertPet)) {</span>
+<span class="nc" id="L56">            statement.setInt(1,4);</span>
+<span class="nc" id="L57">            statement.setInt(2, client.getId());</span>
+<span class="nc" id="L58">            statement.setString(3, client.getPetName());</span>
+<span class="nc" id="L59">            statement.setString(4, client.getKindOfPet());</span>
+<span class="nc" id="L60">            statement.executeUpdate();</span>
+<span class="nc" id="L61">        } catch (SQLException e) {</span>
+<span class="nc" id="L62">            e.printStackTrace();</span>
+<span class="nc" id="L63">        }</span>
+<span class="nc" id="L64">    }</span>
+
+    public static void main(String[] args) {
+<span class="nc" id="L67">        Demo demo = new Demo();</span>
+<span class="nc" id="L68">        demo.addClient(new Client(4, &quot;Abcd&quot;, new Pet(&quot;Abc&quot;)));</span>
+<span class="nc" id="L69">        demo.close();</span>
+<span class="nc" id="L70">    }</span>
+
+    private void close(){
+        try {
+<span class="nc" id="L74">            connection.close();</span>
+<span class="nc" id="L75">        } catch (SQLException e) {</span>
+<span class="nc" id="L76">            e.printStackTrace();</span>
+<span class="nc" id="L77">        }</span>
+<span class="nc" id="L78">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>

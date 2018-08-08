@@ -1,0 +1,94 @@
+body {
+    background: url("../Images/PagesBackground.jpg");
+}
+
+div {
+    text-align: center;
+    font-size: 25px;
+    opacity: 0.7; /*Прозорість*/
+    background: darkgray; /* Колір фона */
+    padding: 5px; /* Поля навколо текста */
+    width: 50%;
+}
+
+.attention {
+    position: center;
+    margin: auto;
+    border-radius: 5px;
+
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    opacity: 0.7; /*Прозорість*/
+    background: red; /* Колір фона */
+    padding: 5px; /* Поля навколо текста */
+    width: 50%;
+}
+
+table {
+    text-align: center;
+    width: 75%;
+    font-size: 17px;
+    opacity: 0.75; /*Прозорість*/
+    background: gold ; /* Колір фона */
+    padding: 5px; /* Поля навколо текста */
+}
+
+.center-div
+{
+    position: center;
+    margin: auto;
+
+    border-radius: 5px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.div-form-center {
+    position: center;
+    margin: auto;
+    border-image: stretch;
+    border: 3px solid gold;
+    width: 45%;
+    background: silver;
+    opacity: 0.85;
+
+    border-radius: 15px;
+}
+
+.div-form-left {
+    border-color: gold;
+    width: 45%;
+    background: silver;
+    opacity: 0.80;
+
+    border-radius: 15px;
+}
+
+a {
+    position: center;
+    margin: auto;
+    color: green;
+    font-language-override: inherit;
+    font-style: oblique;
+}
+

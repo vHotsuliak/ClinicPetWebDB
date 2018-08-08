@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Client.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ClinicPetWebJDBC Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">com.models</a> &gt; <span class="el_source">Client.java</span></div><h1>Client.java</h1><pre class="source lang-java linenums">package com.models;
+
+
+import com.models.pets.Pet;
+
+import java.util.Objects;
+
+public class Client {
+    private final int id; // Contains id of this client
+    private final String clientName; // Contains client's name
+    private final Pet pet; // Contains pet of this client
+
+    /**
+     * Creating client with id, name and pet which were passed as parameters.
+     * @param id contains id for this client
+     * @param clientName contains client's name
+     * @param pet contains client's pet
+     */
+<span class="fc" id="L19">    public Client(final int id, final String clientName, final Pet pet) {</span>
+<span class="fc" id="L20">        this.id = id;</span>
+<span class="fc" id="L21">        this.clientName = clientName;</span>
+<span class="fc" id="L22">        this.pet = pet;</span>
+<span class="fc" id="L23">    }</span>
+
+    /**
+     * Return id this client
+     * @return id
+     */
+    public int getId() {
+<span class="fc" id="L30">        return id;</span>
+    }
+
+    /**
+     * Return client's name
+     * @return client's name
+     */
+    public String getClientName() {
+<span class="fc" id="L38">        return clientName;</span>
+    }
+
+    /**
+     * Return kind of pet this client
+     * @return kind of pet
+     */
+    public String getKindOfPet() {
+<span class="fc" id="L46">        String kind = &quot;Pet&quot;;</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (this.pet.getClass().toString().contains(&quot;Cat&quot;))</span>
+<span class="fc" id="L48">            kind = &quot;Cat&quot;;</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        else  if (this.pet.getClass().toString().contains(&quot;Dog&quot;))</span>
+<span class="fc" id="L50">            kind = &quot;Dog&quot;;</span>
+<span class="fc" id="L51">        return kind;</span>
+    }
+
+
+    /**
+     * Return client's pet
+     * @return pet
+     */
+    public Pet getPet() {
+<span class="fc" id="L60">        return pet;</span>
+    }
+
+    /**
+     * Return Client's pet's name
+     * @return pet's name
+     */
+    public String getPetName() {
+<span class="fc" id="L68">        return pet.getPetName();</span>
+    }
+
+    @Override
+    public boolean equals(Object o) {
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (this == o) return true;</span>
+<span class="fc bfc" id="L74" title="All 4 branches covered.">        if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="fc" id="L75">        Client client = (Client) o;</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        return id == client.id &amp;&amp;</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">                Objects.equals(clientName, client.clientName) &amp;&amp;</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">                Objects.equals(pet, client.pet);</span>
+    }
+
+    @Override
+    public int hashCode() {
+
+<span class="fc" id="L84">        return Objects.hash(id, clientName, pet);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>
