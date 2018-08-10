@@ -18,7 +18,7 @@ SELECT * FROM Clients AS clients where first_name = 'Vasyal';
 
 SELECT * FROM Pets AS pets where nic = 'Pet';
 
-UPDATE Clients SET first_name = 'Vasyl' WHERE first_name = 'Vasyal';
+UPDATE Clients SET first_name = 'Vasyl' WHERE first_name = 'Vasyl';
 
 UPDATE Pets SET nic = 'Bars' WHERE nic = 'Pet';
 

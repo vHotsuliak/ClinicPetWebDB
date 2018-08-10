@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.models">
+    <class name="com.models.Client" table="Clients">
+        <meta attribute="class-description">
+            This class contains the user detail.
+        </meta>
+
+        <id name="id" type="int" column="user_id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="clientName" column="user_nic" type="string"/>
+    </class>
+</hibernate-mapping>

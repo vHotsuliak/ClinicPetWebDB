@@ -7,9 +7,7 @@ import org.junit.Test;
 
 import java.util.Objects;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class ClientAndPetTest {
     private Client client;
@@ -59,26 +57,26 @@ public class ClientAndPetTest {
     @Test
     public void equalsClassClient() {
         client = new Client(3, "Vasyl", new Pet("Altay"));
-        assertEquals(true, client.equals(new Client(3, "Vasyl", new Pet("Altay"))));
-        assertEquals(true, client.equals(client));
-        assertEquals(false, client.equals(null));
+        assertEquals(client, new Client(3, "Vasyl", new Pet("Altay")));
+        assertEquals(client, client);
+        assertFalse(client.equals(null));
         client = new Client(4, "Vasyl", new Dog("Altay"));
-        assertEquals(false, client.equals(new Pet("Altay")));
-        assertEquals(false, client.equals(new Client(4, "Vasyl", new Pet("Altay"))));
+        assertNotEquals(client, new Pet("Altay"));
+        assertNotEquals(client, new Client(4, "Vasyl", new Pet("Altay")));
         client = new Client(5, "Julia", new Cat("Lisa"));
-        assertEquals(false, client.equals(new Client(5, "Julia", new Cat("Lis"))));
-        assertEquals(false, client.equals(new Client(5, "Фелик", new Cat("Lis"))));
-        assertEquals(false, client.equals(new Client(4, "Фелик", new Cat("Lis"))));
+        assertNotEquals(client, new Client(5, "Julia", new Cat("Lis")));
+        assertNotEquals(client, new Client(5, "Фелик", new Cat("Lis")));
+        assertNotEquals(client, new Client(4, "Фелик", new Cat("Lis")));
     }
 
     @Test
     public void equalsClassPet() {
         Pet pet = new Pet("Lisa");
-        assertTrue(pet.equals(pet));
+        assertEquals(pet, pet);
         assertFalse(pet.equals(null));
-        assertFalse( pet.equals(new Cat("Lisa")));
+        assertNotEquals(pet, new Cat("Lisa"));
         pet = new Cat("Lisa");
-        assertTrue( pet.equals(new Cat("Lisa")));
+        assertEquals(pet, new Cat("Lisa"));
     }
 
     @Test

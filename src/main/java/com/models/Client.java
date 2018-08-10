@@ -6,9 +6,12 @@ import com.models.pets.Pet;
 import java.util.Objects;
 
 public class Client {
-    private final int id; // Contains id of this client
-    private final String clientName; // Contains client's name
-    private final Pet pet; // Contains pet of this client
+    private int id; // Contains id of this client
+    private String clientName; // Contains client's name
+    private Pet pet; // Contains pet of this client
+
+    public Client() {
+    }
 
     /**
      * Creating client with id, name and pet which were passed as parameters.
@@ -66,6 +69,30 @@ public class Client {
      */
     public String getPetName() {
         return pet.getPetName();
+    }
+
+    /**
+     * Set id
+     * @param id client id
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    /**
+     * Set client's name
+     * @param clientName
+     */
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
+
+    /**
+     * set pet for this client
+     * @param pet
+     */
+    public void setPet(Pet pet) {
+        this.pet = pet;
     }
 
     @Override

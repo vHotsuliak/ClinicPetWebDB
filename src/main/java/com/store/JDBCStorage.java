@@ -236,9 +236,9 @@ public class JDBCStorage implements Storage {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            return client;
         }
+        return client;
+
     }
 
     /**
