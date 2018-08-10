@@ -12,8 +12,15 @@ public class Pet {
 	/*
 	 * Save pet's name   
 	 */
+	private int id;
+	private int ownerID;
+	private String kindOfPet;
 	private String petName;
-	
+
+
+	public Pet() {
+	}
+
 	/**
 	 * Creation of pet name.
 	 * @param petName contains pet name.
@@ -23,6 +30,62 @@ public class Pet {
 		synchronized (this) {
 			this.petName = petName;
 		}
+	}
+
+	/**
+	 * Return pet id.
+	 * @return pet id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * Set pet id.
+	 * @param id contains pet id.
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * Return id of pet owner.
+	 * @return id of pet owner.
+	 */
+	public int getOwnerID() {
+		return ownerID;
+	}
+
+	/**
+	 * Set id of pet owner.
+	 * @param ownerID id of pet owner.
+	 */
+	public void setOwnerID(int ownerID) {
+		this.ownerID = ownerID;
+	}
+
+	/**
+	 *
+	 * @return kind of pet
+	 */
+	public String getKindOfPet() {
+		return kindOfPet;
+	}
+
+	/**
+	 * Set kind of pet.
+	 * @param kindOfPet contains kind of pet.
+	 */
+	public void setKindOfPet(String kindOfPet) {
+		this.kindOfPet = kindOfPet;
+	}
+
+	/**
+	 * Set pet name.
+	 * @param petName pet's name.
+	 */
+	public void setPetName(String petName) {
+		this.petName = petName;
 	}
 
 	/**

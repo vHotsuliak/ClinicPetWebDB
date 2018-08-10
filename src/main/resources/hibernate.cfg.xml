@@ -3,6 +3,7 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 
+<!--suppress HibernateConfigDomInspection -->
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
@@ -19,9 +20,8 @@
         <property name="hibernate.c3p0.validate">true</property>
 
         <!-- List of XML mapping files -->
-        <!--suppress HibernateConfigDomInspection -->
         <mapping resource="com/models/Client.hbm.xml"/>
-
+        <mapping resource="com/models/pets/Pet.hbm.xml"/>
 
 
     </session-factory>

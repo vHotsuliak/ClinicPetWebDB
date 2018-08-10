@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.models.pets">
+    <class name="com.models.pets.Pet" table="Pets">
+        <meta attribute="class-description">
+            This class contains the user detail.
+        </meta>
+
+        <id name="id" type="int" column="pet_id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="ownerID" column="client_id" type="int"/>
+        <property name="petName" column="nic" type="string"/>
+        <property name="kindOfPet" column="kind_of_pet" type="string"/>
+    </class>
+</hibernate-mapping>
