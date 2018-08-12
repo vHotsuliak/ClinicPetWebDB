@@ -9,7 +9,7 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/Clinic</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="94de1be5-af53-47d4-8e6c-f35a5ea4feae">
+    <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="94de1be5-af53-47d4-8e6c-f35a5ea4feae">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>

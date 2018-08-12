@@ -1,12 +1,13 @@
-<?xml version = "1.0" encoding = "utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC
-        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "-//Hibernate/Hibernate Mapping DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
 
 <hibernate-mapping package="com.models.pets">
     <class name="com.models.pets.Pet" table="Pets">
         <meta attribute="class-description">
-            This class contains the user detail.
+            This class contains the pet detail.
         </meta>
 
         <id name="id" type="int" column="pet_id">
