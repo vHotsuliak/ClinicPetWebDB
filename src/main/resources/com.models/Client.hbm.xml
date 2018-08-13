@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="com.models">
+<hibernate-mapping>
     <class name="com.models.Client" table="Clients">
         <meta attribute="class-description">
             This class contains the user detail.
