@@ -12,7 +12,9 @@ public class HibernateStorage implements Storage {
     private final SessionFactory factory;
 
     public HibernateStorage() {
-        factory = new Configuration().configure().buildSessionFactory();
+        Configuration configuration = new Configuration();
+        configuration.configure();
+        factory = configuration.buildSessionFactory();
     }
 
     @Override
