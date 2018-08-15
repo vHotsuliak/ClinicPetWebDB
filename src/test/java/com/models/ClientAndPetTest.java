@@ -9,19 +9,34 @@ import java.util.Objects;
 
 import static org.junit.Assert.*;
 
+
 public class ClientAndPetTest {
     private Client client;
 
     @Test
-    public void getId() {
-        client = new Client(3, "Vasyl", new Pet("Altay"));
-        assertEquals(3, client.getId());
+    public void clientGartersAndSetters() {
+        client = new Client();
+        assertNotNull(client);
+        client.setId(1);
+        assertEquals(1, client.getId());
+        client.setClientName("Vasyl");
+        assertEquals("Vasyl", client.getClientName());
+        client.setPet(new Dog("Altay"));
+        assertEquals(new Dog("Altay"), client.getPet());
     }
 
     @Test
-    public void getClientName() {
-        client = new Client(3, "Vasyl", new Pet("Altay"));
-        assertEquals("Vasyl", client.getClientName());
+    public void petGettersAndSetters() {
+        Pet pet = new Pet();
+        assertNotNull(pet);
+        pet.setId(1);
+        assertEquals(1, pet.getId());
+        pet.setKindOfPet("Cat");
+        assertEquals("Cat", pet.getKindOfPet());
+        pet.setOwnerID(1);
+        assertEquals(1, pet.getOwnerID());
+        pet.setPetName("Lisa");
+        assertEquals("Lisa", pet.getPetName());
     }
 
     @Test
@@ -54,6 +69,7 @@ public class ClientAndPetTest {
         assertEquals("Lisa", client.getPetName());
     }
 
+    @SuppressWarnings({"SimplifiableJUnitAssertion", "ObjectEqualsNull", "ConstantConditions"})
     @Test
     public void equalsClassClient() {
         client = new Client(3, "Vasyl", new Pet("Altay"));
@@ -69,6 +85,7 @@ public class ClientAndPetTest {
         assertNotEquals(client, new Client(4, "Фелик", new Cat("Lis")));
     }
 
+    @SuppressWarnings({"SimplifiableJUnitAssertion", "ObjectEqualsNull", "ConstantConditions"})
     @Test
     public void equalsClassPet() {
         Pet pet = new Pet("Lisa");
