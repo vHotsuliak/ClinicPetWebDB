@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Connection;
 
 import static com.models.CreatePet.createPet;
 import static junit.framework.Assert.assertEquals;
@@ -37,8 +38,8 @@ public class AVCDESClientServletsTest extends Mockito {
         when(request.getParameter("petName")).thenReturn("TestName0");
         verify(request, atLeast(0)).getParameter("kindOfPet");
         verify(request, atLeast(0)).getParameter("petName");
+        //noinspection AccessStaticViaInstance
         assertEquals( new Pet("TestName0"), createPet.createPet(request));
-
     }
 
     @Test
@@ -74,8 +75,13 @@ public class AVCDESClientServletsTest extends Mockito {
      */
     @Test
     public void ClientViewServletTest() throws ServletException, IOException{
+        HttpServletRequest request = mock(HttpServletRequest.class);
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        RequestDispatcher dispatcher = mock(RequestDispatcher.class);
 
-
+        when(request.getRequestDispatcher("/views/client/ClientView.jsp")).thenReturn(dispatcher);
+        ClientViewServlet clientViewServlet = new ClientViewServlet();
+        clientViewServlet.doGet(request, response);
     }
 
 
@@ -177,4 +183,33 @@ public class AVCDESClientServletsTest extends Mockito {
     }
 
 
+    @Test
+    public void AddClientServletTest() throws IOException, ServletException {
+        HttpServletRequest request = mock(HttpServletRequest.class);
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        RequestDispatcher dispatcher = mock(RequestDispatcher.class);
+
+        int lastId  = this.USER_CACHE.getLastId();
+
+        USER_CACHE.add(new Client(lastId + 1, "Test", new Pet("Test")));
+
+        when(request.getRequestDispatcher("/views/client/EditClient.jsp")).thenReturn(dispatcher);
+        when(request.getParameter("id")).thenReturn(String.valueOf(lastId + 1));
+
+        verify(request, atLeast(0)).getParameter("id");
+
+        AddClientServlet addClientServlet = new AddClientServlet();
+
+        when(request.getParameter("clientName")).thenReturn("test0");
+        when(request.getParameter("petName")).thenReturn("test0");
+        when(request.getParameter("kindOfPet")).thenReturn("Dog");
+
+        verify(request, atLeast(0)).getParameter("clientName");
+        verify(request, atLeast(0)).getParameter("petName");
+        verify(request, atLeast(0)).getParameter("kindOfPet");
+        verify(response, atLeast(0)).sendRedirect(String.format("%s%s", request.getContextPath(), "/client/view"));
+
+        addClientServlet.doPost(request, response);
+        this.USER_CACHE.delete(lastId + 1);
+    }
 }
