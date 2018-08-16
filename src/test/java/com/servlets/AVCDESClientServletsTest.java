@@ -191,8 +191,6 @@ public class AVCDESClientServletsTest extends Mockito {
 
         int lastId  = this.USER_CACHE.getLastId();
 
-        USER_CACHE.add(new Client(lastId + 1, "Test", new Pet("Test")));
-
         when(request.getRequestDispatcher("/views/client/EditClient.jsp")).thenReturn(dispatcher);
         when(request.getParameter("id")).thenReturn(String.valueOf(lastId + 1));
 
