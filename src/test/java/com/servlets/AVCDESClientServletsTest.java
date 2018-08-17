@@ -1,8 +1,8 @@
 package com.servlets;
 
 import com.models.Client;
-import com.models.pets.Cat;
 import com.models.CreatePet;
+import com.models.pets.Cat;
 import com.models.pets.Dog;
 import com.models.pets.Pet;
 import com.store.UserCache;
@@ -14,12 +14,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
 
 import static com.models.CreatePet.createPet;
 import static junit.framework.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 /*
 This tests are calculate with that none will not doing some thing with clients date in the same moment!!!!!!!!!!!!!!!!!!!

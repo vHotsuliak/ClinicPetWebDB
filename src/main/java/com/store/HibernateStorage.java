@@ -20,7 +20,6 @@ public class HibernateStorage implements Storage {
         }
     }
 
-
     @SuppressWarnings("JpaQlInspection")
     @Override
     public Collection<Client> values() {

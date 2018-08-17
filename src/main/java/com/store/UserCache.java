@@ -5,7 +5,7 @@ import com.models.Client;
 import java.util.Collection;
 
 public class UserCache implements Storage{
-    public static final UserCache INSTANCE = new UserCache();
+    private static final UserCache INSTANCE = new UserCache();
 
 
 
