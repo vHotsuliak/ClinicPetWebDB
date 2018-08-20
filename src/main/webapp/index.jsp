@@ -1,4 +1,4 @@
-<%@ page isELIgnored="false"%>
+<%@ page isELIgnored="false" %>
 <html>
 <head>
     <title>Pet clinic</title>

@@ -4,13 +4,13 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.models.Client" table="Clients">
+    <class name="com.models.Client" table="clients">
         <meta attribute="class-description">
             This class contains the user detail.
         </meta>
 
-        <id name="id" type="int" column="user_id">
-            <generator class="identity"/>
+        <id name="id" column="user_id" type="int">
+            <generator class="native"/>
         </id>
 
         <property name="clientName" column="user_nic" type="string"/>

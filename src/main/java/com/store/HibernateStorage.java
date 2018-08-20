@@ -1,9 +1,7 @@
 package com.store;
 
 import com.models.Client;
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import java.util.Collection;
@@ -13,24 +11,16 @@ public class HibernateStorage implements Storage {
 
     public HibernateStorage() {
         try {
-            factory = new Configuration().configure().buildSessionFactory();
+            factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
         } catch (Throwable ex) {
             System.err.println("Failed to create sessionFactory object." + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }
 
-    @SuppressWarnings("JpaQlInspection")
     @Override
     public Collection<Client> values() {
-        final Session session = factory.openSession();
-        Transaction tx = session.beginTransaction();
-        try {
-            return session.createQuery("from Clients join Pets on Clients.user_id = Pets.client_id").list();
-        } finally {
-            tx.commit();
-            session.close();
-        }
+       return null;
     }
 
     @Override

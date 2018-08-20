@@ -10,8 +10,8 @@
             This class contains the pet detail.
         </meta>
 
-        <id name="id" type="int" column="pet_id">
-            <generator class="identity"/>
+        <id name="id" column="pet_id" type="int">
+            <generator class="native"/>
         </id>
 
         <property name="ownerID" column="client_id" type="int"/>

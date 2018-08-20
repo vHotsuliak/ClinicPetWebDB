@@ -68,16 +68,16 @@ public class JDBCStorage implements Storage {
             throw new IllegalStateException(e);
         }
 
-        try(final Statement statement = this.connection.createStatement();
-            final ResultSet rsClient = statement.executeQuery("SELECT MAX(user_id) as max FROM Clients WHERE user_id is not null")) {
+        try(final PreparedStatement statement = this.connection.prepareStatement("SELECT MAX(user_id) as max FROM Clients WHERE user_id is not null");
+            final ResultSet rsClient = statement.executeQuery()) {
                 while (rsClient.next())
                     idsClint.set(rsClient.getInt("max"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        try(final Statement statement = this.connection.createStatement();
-            final ResultSet rsPet = statement.executeQuery("SELECT MAX(pet_id) as max FROM Pets WHERE pet_id is not null")) {
+        try(final PreparedStatement statement = this.connection.prepareStatement("SELECT MAX(pet_id) as max FROM Pets WHERE pet_id is not null");
+            final ResultSet rsPet = statement.executeQuery()) {
                 while (rsPet.next())
                     idsPet.set(rsPet.getInt("max"));
         } catch (SQLException e) {
@@ -93,8 +93,8 @@ public class JDBCStorage implements Storage {
     @Override
     public Collection<Client> values() {
         final List<Client> clients = new ArrayList<>();
-        try(final Statement statement = this.connection.createStatement();
-            final ResultSet rs = statement.executeQuery("SELECT * FROM Clients JOIN Pets ON Clients.user_id=Pets.client_id")) {
+        try(final PreparedStatement statement = this.connection.prepareStatement("SELECT * FROM Clients JOIN Pets ON Clients.user_id=Pets.client_id");
+            final ResultSet rs = statement.executeQuery()) {
             while (rs.next())
                 clients.add(new Client(rs.getInt("user_id"), rs.getString("user_nic"), createPet(rs.getString("kind_of_pet"), rs.getString("nic"))));
         } catch (SQLException e) {
