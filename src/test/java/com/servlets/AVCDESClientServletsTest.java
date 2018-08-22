@@ -28,7 +28,7 @@ public class AVCDESClientServletsTest extends Mockito {
     Start testing CreatePet class
      */
     @Test
-    public  void  CreatePetPet(){
+    public  void  createPetPet(){
         CreatePet createPet = new CreatePet();
         HttpServletRequest request = mock(HttpServletRequest.class);
         when(request.getParameter("kindOfPet")).thenReturn("Pet");
@@ -40,7 +40,7 @@ public class AVCDESClientServletsTest extends Mockito {
     }
 
     @Test
-    public  void  CreatePetDog(){
+    public  void  createPetDog(){
         HttpServletRequest request = mock(HttpServletRequest.class);
         when(request.getParameter("kindOfPet")).thenReturn("Dog");
         when(request.getParameter("petName")).thenReturn("TestName1");
@@ -51,7 +51,7 @@ public class AVCDESClientServletsTest extends Mockito {
     }
 
     @Test
-    public  void  CreatePetCat() {
+    public  void  createPetCat() {
         HttpServletRequest request = mock(HttpServletRequest.class);
         when(request.getParameter("kindOfPet")).thenReturn("Cat");
         when(request.getParameter("petName")).thenReturn("TestName2");
@@ -71,7 +71,7 @@ public class AVCDESClientServletsTest extends Mockito {
      * @throws IOException IOException
      */
     @Test
-    public void ClientViewServletTest() throws ServletException, IOException{
+    public void clientViewServletTest() throws ServletException, IOException{
         HttpServletRequest request = mock(HttpServletRequest.class);
         HttpServletResponse response = mock(HttpServletResponse.class);
         RequestDispatcher dispatcher = mock(RequestDispatcher.class);
@@ -91,7 +91,7 @@ public class AVCDESClientServletsTest extends Mockito {
      * @throws IOException IOException
      */
     @Test
-    public void EditClientServletChangeKindOFPetTest() throws ServletException, IOException{
+    public void editClientServletChangeKindOFPetTest() throws ServletException, IOException{
         HttpServletRequest request = mock(HttpServletRequest.class);
         HttpServletResponse response = mock(HttpServletResponse.class);
         RequestDispatcher dispatcher = mock(RequestDispatcher.class);
@@ -144,7 +144,7 @@ public class AVCDESClientServletsTest extends Mockito {
      * @throws IOException IOException
      */
     @Test
-    public void DeleteClientServletTest() throws ServletException, IOException {
+    public void deleteClientServletTest() throws ServletException, IOException {
         HttpServletRequest request = mock(HttpServletRequest.class);
         HttpServletResponse response = mock(HttpServletResponse.class);
         RequestDispatcher dispatcher = mock(RequestDispatcher.class);
@@ -181,7 +181,7 @@ public class AVCDESClientServletsTest extends Mockito {
 
 
     @Test
-    public void AddClientServletTest() throws IOException, ServletException {
+    public void addClientServletTest() throws IOException, ServletException {
         HttpServletRequest request = mock(HttpServletRequest.class);
         HttpServletResponse response = mock(HttpServletResponse.class);
         RequestDispatcher dispatcher = mock(RequestDispatcher.class);
@@ -205,6 +205,36 @@ public class AVCDESClientServletsTest extends Mockito {
         verify(response, atLeast(0)).sendRedirect(String.format("%s%s", request.getContextPath(), "/client/view"));
 
         addClientServlet.doPost(request, response);
+        this.USER_CACHE.delete(lastId + 1);
+    }
+
+    @Test
+    public void searchClientServletTest() throws IOException, ServletException {
+        HttpServletRequest request = mock(HttpServletRequest.class);
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        RequestDispatcher dispatcher = mock(RequestDispatcher.class);
+
+        int lastId  = this.USER_CACHE.getLastId();
+
+        this.USER_CACHE.add(new Client(lastId + 1 ,"test0", new Dog("test0")));
+
+        when(request.getRequestDispatcher("/views/client/SearchClient.jsp")).thenReturn(dispatcher);
+        when(request.getParameter("id")).thenReturn(String.valueOf(lastId + 1));
+
+        verify(request, atLeast(0)).getParameter("id");
+
+        SearchClientServlet searchClientServlet = new SearchClientServlet();
+
+        when(request.getParameter("clientName")).thenReturn("test0");
+        when(request.getParameter("petName")).thenReturn("test0");
+        when(request.getParameter("kindOfPet")).thenReturn("Dog");
+
+        verify(request, atLeast(0)).getParameter("clientName");
+        verify(request, atLeast(0)).getParameter("petName");
+        verify(request, atLeast(0)).getParameter("kindOfPet");
+        verify(response, atLeast(0)).sendRedirect(String.format("%s%s", request.getContextPath(), "/client/search"));
+
+        searchClientServlet.doGet(request, response);
         this.USER_CACHE.delete(lastId + 1);
     }
 }

@@ -9,7 +9,7 @@ public class UserCache implements Storage{
 
 
 
-    private final Storage storage = new HibernateStorage();
+    private final Storage storage = new JDBCStorage();
 
     public static UserCache getInstance(){
         return INSTANCE;

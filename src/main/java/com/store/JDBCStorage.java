@@ -17,10 +17,6 @@ public class JDBCStorage implements Storage {
     //last id're for clients and pets
     private final AtomicInteger idsClint = new AtomicInteger();
 
-    public AtomicInteger getIdsClint() {
-        return idsClint;
-    }
-
     private final AtomicInteger idsPet = new AtomicInteger();
 
     // -----SQL commands-----
@@ -155,7 +151,7 @@ public class JDBCStorage implements Storage {
     }
 
     /**
-     * Editing client data in database, also editing pet data in database.
+     * Editing client data in database, also editing pet data in database. Id won't be updated.
      * @param client contains client data include pet.
      */
     @Override
