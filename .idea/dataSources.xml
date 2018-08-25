@@ -9,5 +9,15 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/Clinic</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="clinicHibernate/Hibernate" uuid="0eedc024-0014-4ccc-b8a7-db1d490d73a4">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+E:/Java/workspaceIntel/ClinicPetWebDB/src/main/resources/META-INF/Persistence.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/Clinic</jdbc-url>
+    </data-source>
   </component>
 </project>
