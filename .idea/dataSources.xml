@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="08018b9b-131a-4726-bf98-0daf74ebe941">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml</remarks>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/Clinic</jdbc-url>
-    </data-source>
     <data-source source="LOCAL" name="parsentev" uuid="e8963a8b-e342-43e3-846e-2fcc7cc4d669">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

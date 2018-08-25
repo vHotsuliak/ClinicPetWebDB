@@ -1,11 +1,5 @@
 package com.models.pets;
 
-/**
- * 
- * @author Vasyl Gotsuliak
- * @since 07.08.2017 
- */
-
 public class Cat extends Pet {
 	/**
 	 *  Creation of cat name

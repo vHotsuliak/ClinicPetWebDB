@@ -1,10 +1,6 @@
 package com.models.pets;
 
-/**
- * 
- * @author Vasyl Gotsuliak
- * @since 07.08.2017 
- */
+
 
 public class Dog extends Pet {
 	/**

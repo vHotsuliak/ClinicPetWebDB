@@ -1,20 +1,26 @@
 package com.models.pets;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * 
- * @author Vasyl Gotsuliak
- * @since 07.08.2017 
- */
-
+@Entity
+@Table(name = "pets")
 public class Pet {
-	/*
-	 * Save pet's name   
-	 */
+	@Id
+	@GeneratedValue(generator = "increment")
+	@GenericGenerator(name = "increment", strategy = "increment")
+	@Column(name = "user_id")
 	private int id;
+
+	@Column(name = "client_id")
 	private int ownerID;
+
+	@Column(name = "kind_of_pet")
 	private String kindOfPet;
+
+	@Column(name = "nic")
 	private String petName;
 
 
