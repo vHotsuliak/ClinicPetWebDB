@@ -21,23 +21,3 @@ public class Dog extends Pet {
 		return super.hashCode();
 	}
 }
-/*
-
-		/**
-		 *
-		 * @return dog's name
-		 */
-	/*@Override
-	String getName() {
-		return super.getName();
-	}
-
-		/**
-		 * Change name for this dog's name
-		 * @param newName
-		 */
-		/*@Override
-		void changeName(final String newName) {
-			super.changeName(newName);
-		}
- */

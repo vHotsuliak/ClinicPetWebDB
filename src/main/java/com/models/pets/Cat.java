@@ -19,23 +19,3 @@ public class Cat extends Pet {
 		return super.hashCode();
 	}
 }
-/*
-
-	/**
-	 *
-	 * @return cat's name
-	 */
-	/*@Override
-	String getName() {
-		return super.getName();
-	}
-
-	/**
-	 * Change name for this cat's name
-	 * @param newName
-	 */
-	/*@Override
-	void changeName(final String newName) {
-		super.changeName(newName);
-	}
-*/

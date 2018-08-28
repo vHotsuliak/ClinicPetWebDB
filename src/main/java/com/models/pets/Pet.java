@@ -11,8 +11,9 @@ public class Pet {
 	@Id
 	@GeneratedValue(generator = "increment")
 	@GenericGenerator(name = "increment", strategy = "increment")
-	@Column(name = "user_id")
+	@Column(name = "pet_id")
 	private int id;
+
 
 	@Column(name = "client_id")
 	private int ownerID;
@@ -102,6 +103,15 @@ public class Pet {
 		return petName;
 	}
 
+	@Override
+	public String toString() {
+		return "Pet{" +
+				"id=" + id +
+				", ownerID=" + ownerID +
+				", kindOfPet='" + kindOfPet + '\'' +
+				", petName='" + petName + '\'' +
+				'}';
+	}
 
 	@Override
 	public boolean equals(Object o) {

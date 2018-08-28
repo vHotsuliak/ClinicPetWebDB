@@ -10,15 +10,17 @@ import java.util.Objects;
 @Entity
 @Table(name = "clients")
 public class Client {
+
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
-    @Column (name = "user_id")
+    @Column(name = "user_id")
     private int id; // Contains id of this client
 
     @Column(name = "user_nic")
     private String clientName; // Contains client's name
 
+    @Transient
     private Pet pet; // Contains pet of this client
 
     public Client() {
@@ -120,5 +122,14 @@ public class Client {
     public int hashCode() {
 
         return Objects.hash(id, clientName, pet);
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", clientName='" + clientName + '\'' +
+                ", pet=" + pet +
+                '}';
     }
 }

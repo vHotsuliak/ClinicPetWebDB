@@ -4,10 +4,7 @@ import com.models.Client;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 import java.util.Collection;
 
 public class HibernateStorage implements Storage {
@@ -22,7 +19,7 @@ public class HibernateStorage implements Storage {
        EntityManager entityManager = this.entityManagerFactory.createEntityManager();
        entityManager.getTransaction().begin();
        try {
-           return entityManager.createQuery("from Client join Pet on Client.id = Pet.ownerID").getResultList();
+           return entityManager.createQuery("from Client").getResultList();
        }finally {
            entityManager.getTransaction().commit();
            entityManager.close();
@@ -65,7 +62,7 @@ public class HibernateStorage implements Storage {
 
     @Override
     public void close() {
-
+        this.entityManagerFactory.close();
     }
 
     @Override
