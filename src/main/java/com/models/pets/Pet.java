@@ -15,6 +15,7 @@ public class Pet {
 	private int id;
 
 
+	@JoinColumn(name = "client_id")
 	@Column(name = "client_id")
 	private int ownerID;
 

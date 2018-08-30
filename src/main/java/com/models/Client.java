@@ -104,6 +104,12 @@ public class Client {
      * set pet for this client
      * @param pet
      */
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "pets",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "client_id")
+    )
     public void setPet(Pet pet) {
         this.pet = pet;
     }
