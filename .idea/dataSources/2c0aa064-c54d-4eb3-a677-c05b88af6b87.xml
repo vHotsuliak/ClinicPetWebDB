@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="clinicHibernate/Hibernate">
-  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.10">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.11">
     <root id="1">
       <ServerVersion>10.4</ServerVersion>
     </root>
@@ -86,7 +86,7 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-08-28.20:59:15.081</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-09-01.21:29:11.633</IntrospectionTimestamp>
       <IntrospectionStateNumber>2529</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>

@@ -6,7 +6,7 @@ public class SimpleHibernateConnection {
         final UserCache hibernateStorage = UserCache.getInstance();
         try {
             for(Object user : hibernateStorage.values())
-            System.out.println("args = [" + user + "]");
+            System.out.println("args = [" + user.toString() + "]");
         } finally {
             hibernateStorage.close();
         }

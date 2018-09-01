@@ -1,10 +1,11 @@
 package com.store;
 
 import com.models.Client;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import com.models.pets.Pet;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.Collection;
 
 public class HibernateStorage implements Storage {
@@ -19,7 +20,15 @@ public class HibernateStorage implements Storage {
        EntityManager entityManager = this.entityManagerFactory.createEntityManager();
        entityManager.getTransaction().begin();
        try {
-           return entityManager.createQuery("from Client").getResultList();
+           Collection<Client> clients = entityManager.createQuery("from Client").getResultList();
+           Collection<Pet> pets = entityManager.createQuery("from Pet ").getResultList();
+           for (Client client : clients)
+               for (Pet pet : pets)
+                   if (client.getId() == pet.getOwnerID()) {
+                       client.setPet(pet);
+                       continue;
+                   }
+           return clients;
        }finally {
            entityManager.getTransaction().commit();
            entityManager.close();

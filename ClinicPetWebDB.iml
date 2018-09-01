@@ -29,7 +29,8 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
         <datasource-mapping>
-          <factory-entry name="clinicHibernate" value="a8f34c98-8dfc-43ee-a14e-f56c52f81b81" />
+          <factory-entry name="Entities" />
+          <factory-entry name="clinicHibernate" value="2c0aa064-c54d-4eb3-a677-c05b88af6b87" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>

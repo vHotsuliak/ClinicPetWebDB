@@ -6,16 +6,26 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="Create Demo">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0d8117dc-2eeb-4960-a10c-3beff7f23800.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6510e7a9-930c-4883-aa19-3929fa83d256.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8fa917b0-9d77-49b8-beaa-88056b688a48.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/95cde496-3253-4eaa-91b5-de3c76722401.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eb6d06f0-fafa-4b5d-ae69-072cabf63709.xml" beforeDir="false" />
+    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="hql">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2c0aa064-c54d-4eb3-a677-c05b88af6b87.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2c0aa064-c54d-4eb3-a677-c05b88af6b87/storage_v2/_src_/database/Clinic.CAF4eA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2c0aa064-c54d-4eb3-a677-c05b88af6b87/storage_v2/_src_/database/Clinic.CAF4eA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/61138a42-efa8-41f5-ba4e-5f4d4035a1dd/storage_v2/_src_/database/Clinic.CAF4eA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/61138a42-efa8-41f5-ba4e-5f4d4035a1dd/storage_v2/_src_/database/Clinic.CAF4eA/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/61138a42-efa8-41f5-ba4e-5f4d4035a1dd/storage_v2/_src_/database/Clinic.CAF4eA/schema/information_schema.FNRwLQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/61138a42-efa8-41f5-ba4e-5f4d4035a1dd/storage_v2/_src_/database/Clinic.CAF4eA/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/61138a42-efa8-41f5-ba4e-5f4d4035a1dd/storage_v2/_src_/database/Clinic.CAF4eA/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/61138a42-efa8-41f5-ba4e-5f4d4035a1dd/storage_v2/_src_/database/Clinic.CAF4eA/schema/pg_temp_1.zkWuFg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/61138a42-efa8-41f5-ba4e-5f4d4035a1dd/storage_v2/_src_/database/Clinic.CAF4eA/schema/pg_toast.33HYYw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/61138a42-efa8-41f5-ba4e-5f4d4035a1dd/storage_v2/_src_/database/Clinic.CAF4eA/schema/pg_toast_temp_1.5ixBaA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/61138a42-efa8-41f5-ba4e-5f4d4035a1dd/storage_v2/_src_/database/Clinic.CAF4eA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a8f34c98-8dfc-43ee-a14e-f56c52f81b81.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClinicPetWebDB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ClinicPetWebDB.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/models/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/models/pets/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/models/pets/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,6 +47,10 @@
       <set />
     </option>
     <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="clinicHibernate/Hibernate" type="feb32156:DbDataSourceImpl" />
+      </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="parsentev" type="feb32156:DbDataSourceImpl" />
@@ -107,13 +121,15 @@
     <session id="2119520202">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="27" />
+          <entry key="project.closed" value="31" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.101" value="1" />
+          <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.103" value="1" />
           <entry key="project.open.time.104" value="1" />
           <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.113" value="1" />
           <entry key="project.open.time.114" value="1" />
           <entry key="project.open.time.117" value="1" />
           <entry key="project.open.time.121" value="1" />
@@ -121,57 +137,60 @@
           <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.8" value="3" />
+          <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.87" value="1" />
-          <entry key="project.opened" value="28" />
+          <entry key="project.open.time.99" value="1" />
+          <entry key="project.opened" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="clients" value="4" />
           <entry key="html" value="4" />
-          <entry key="java" value="80" />
+          <entry key="java" value="87" />
           <entry key="jsp" value="4" />
           <entry key="md" value="1" />
           <entry key="pets" value="3" />
           <entry key="properties" value="2" />
           <entry key="sql" value="5" />
-          <entry key="xml" value="17" />
+          <entry key="xml" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="7" />
           <entry key="HTML" value="4" />
-          <entry key="JAVA" value="80" />
+          <entry key="JAVA" value="87" />
           <entry key="JSP" value="4" />
           <entry key="Markdown" value="1" />
           <entry key="Properties" value="2" />
           <entry key="SQL" value="3" />
           <entry key="Scratch" value="2" />
-          <entry key="XML" value="17" />
+          <entry key="XML" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1471" />
+          <entry key="java" value="1811" />
           <entry key="jsp" value="13" />
           <entry key="sql" value="33" />
-          <entry key="txt" value="33" />
+          <entry key="txt" value="46" />
           <entry key="xml" value="188" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1471" />
+          <entry key="JAVA" value="1811" />
           <entry key="JSP" value="13" />
-          <entry key="PLAIN_TEXT" value="33" />
+          <entry key="PLAIN_TEXT" value="46" />
           <entry key="SQL" value="33" />
           <entry key="XML" value="188" />
         </counts>
@@ -198,8 +217,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" selection-start-line="5" selection-start-column="67" selection-end-line="14" />
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -208,20 +227,51 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/Demo.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/models/ClientAndPetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            <state relative-caret-position="476">
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#460#461#0" expanded="true" />
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#518#519#0" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#583#584#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
-                <element signature="e#668#669#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/pets/Dog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/pets/Pet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -230,68 +280,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/store/JDBCStorageTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+            <state relative-caret-position="374">
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#1313#1314#0" expanded="true" />
+                <element signature="e#1337#1338#0" expanded="true" />
+                <element signature="e#1918#1919#0" expanded="true" />
+                <element signature="e#1945#1946#0" expanded="true" />
+                <element signature="e#1986#1987#0" expanded="true" />
+                <element signature="e#2035#2036#0" expanded="true" />
+                <element signature="e#2148#2149#0" expanded="true" />
+                <element signature="e#2175#2176#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/pets/Pet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://e8963a8b-e342-43e3-846e-2fcc7cc4d669/database/Clinic/schema/public/table/clients">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://e8963a8b-e342-43e3-846e-2fcc7cc4d669/database/Clinic/schema/public/table/pets">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/servlets/AVCDESClientServletsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -360,7 +362,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.tld" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/pets/Pet.hbm.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/store/ClientCacheTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/models/ClientAndPetTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/service/Settings.java" />
         <option value="$PROJECT_DIR$/src/main/resources/parsentev.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/com/models/pets/Pet.hbm.xml" />
@@ -381,10 +382,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/models/pets/Cat.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/store/UserCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Demo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/models/pets/Pet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/models/ClientAndPetTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/models/pets/Pet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" />
       </list>
     </option>
   </component>
@@ -438,7 +440,7 @@
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -451,7 +453,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -475,113 +476,22 @@
               <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="pets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535661382559" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535826916303" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -609,27 +519,27 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.store" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources" />
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main" />
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\META-INF" />
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\com\models\pets" />
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\com\models" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
       <recent name="" />
       <recent name="com.models" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main" />
       <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\java\com" />
       <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\java\com\models" />
       <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\META-INF" />
       <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\java\com\models\pets" />
-      <recent name="D:\Java\workspaceIntel\ClinicPetWebJDBC" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main" />
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources" />
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\META-INF" />
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\com\models\pets" />
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\com\models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -644,7 +554,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SimpleHibernateConnection">
+  <component name="RunManager" selected="Tomcat Server.Tomcat">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -922,7 +832,12 @@
       <workItem from="1535455601002" duration="9152000" />
       <workItem from="1535487404892" duration="2351000" />
       <workItem from="1535568591492" duration="3012000" />
-      <workItem from="1535642966474" duration="1262000" />
+      <workItem from="1535642966474" duration="1963000" />
+      <workItem from="1535718187594" duration="913000" />
+      <workItem from="1535743658310" duration="1290000" />
+      <workItem from="1535808978918" duration="6266000" />
+      <workItem from="1535824875409" duration="894000" />
+      <workItem from="1535825849149" duration="951000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1533758420274</created>
@@ -1043,7 +958,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535480307106</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="hql">
+      <created>1535661446844</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1535661446844</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1079,7 +1001,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="300422000" />
+    <option name="totallyTimeSpent" value="311437000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1092,9 +1014,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.47288504" visible="true" weight="0.35980812" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.46688208" visible="true" weight="0.18710022" />
       <window_info id="Structure" order="1" sideWeight="0.5010846" side_tool="true" weight="0.2803838" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1102,10 +1023,10 @@
       <window_info id="Favorites" order="5" sideWeight="0.5010846" side_tool="true" weight="0.2803838" />
       <window_info id="Web" order="6" sideWeight="0.5010846" side_tool="true" weight="0.2803838" />
       <window_info id="Image Layers" order="7" />
-      <window_info id="Persistence" order="8" sideWeight="0.527115" side_tool="true" visible="true" weight="0.35980812" />
+      <window_info id="Persistence" order="8" sideWeight="0.53311795" side_tool="true" visible="true" weight="0.18710022" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286334" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1123,8 +1044,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.49919224" weight="0.14285715" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.26066098" />
+      <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.49919224" visible="true" weight="0.14285715" />
+      <window_info anchor="right" id="Database" order="5" weight="0.12686567" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -1189,7 +1110,8 @@
     <MESSAGE value="annotation" />
     <MESSAGE value="HibernateStorage" />
     <MESSAGE value="Create Demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Demo" />
+    <MESSAGE value="hql" />
+    <option name="LAST_COMMIT_MESSAGE" value="hql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1208,7 +1130,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java</url>
-          <line>20</line>
+          <line>21</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
@@ -1230,6 +1152,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ClinicPetWebDB.iml">
@@ -1416,24 +1342,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Bank.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Bank.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Client.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/pets/Dog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/models/pets/Cat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="100" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
         </state>
       </provider>
     </entry>
@@ -1444,55 +1356,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/models/ClientAndPetTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/store/UserCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#511#512#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" selection-start-line="5" selection-start-column="67" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Demo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="595">
           <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
@@ -1524,20 +1391,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/store/UserCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#511#512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/models/ClientAndPetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/pets/Dog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/models/pets/Pet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#1313#1314#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+            <element signature="e#1918#1919#0" expanded="true" />
+            <element signature="e#1945#1946#0" expanded="true" />
+            <element signature="e#1986#1987#0" expanded="true" />
+            <element signature="e#2035#2036#0" expanded="true" />
+            <element signature="e#2148#2149#0" expanded="true" />
+            <element signature="e#2175#2176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="87" column="13" lean-forward="true" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        <state relative-caret-position="500">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
