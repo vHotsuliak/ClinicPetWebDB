@@ -1,6 +1,8 @@
 package com.models;
 
 
+import com.models.pets.Cat;
+import com.models.pets.Dog;
 import com.models.pets.Pet;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -60,9 +62,9 @@ public class Client {
      */
     public String getKindOfPet() {
         String kind = "Pet";
-        if (this.pet.getClass().toString().contains("Cat"))
+        if (this.pet instanceof Cat)
             kind = "Cat";
-        else  if (this.pet.getClass().toString().contains("Dog"))
+        else  if (this.pet instanceof Dog)
             kind = "Dog";
         return kind;
     }

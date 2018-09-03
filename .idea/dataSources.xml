@@ -15,7 +15,7 @@
       <imported>true</imported>
       <remarks>Hibernate
 
-E:/Java/workspaceIntel/ClinicPetWebDB/src/main/resources/META-INF/persistence.xml</remarks>
+E:/Java/workspaceIntel/ClinicPetWebDB/src/main/META-INF/persistence.xml</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/Clinic</jdbc-url>
     </data-source>
