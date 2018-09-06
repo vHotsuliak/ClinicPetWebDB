@@ -30,9 +30,9 @@
         <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="Entities" />
-          <factory-entry name="clinicHibernate" value="2c0aa064-c54d-4eb3-a677-c05b88af6b87" />
+          <factory-entry name="clinicHibernate" value="f7dd0fc2-a994-43d1-82bb-9b3ffae10352" />
         </datasource-mapping>
-        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/META-INF/persistence.xml" />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
     </facet>
   </component>

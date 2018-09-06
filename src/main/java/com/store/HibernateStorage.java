@@ -46,6 +46,7 @@ public class HibernateStorage implements Storage {
         try {
             entityManager.getTransaction().begin();
             entityManager.persist(client);
+            client.getPet().setKindOfPet(client.getKindOfPet());
             entityManager.persist(client.getPet());
         }finally {
             entityManager.getTransaction().commit();
@@ -77,5 +78,9 @@ public class HibernateStorage implements Storage {
     @Override
     public Collection<Client> searchClient(String clientName, String petName, String kindOfPet) {
         return null;
+    }
+
+    public EntityManager getEntityManager(){
+        return entityManagerFactory.createEntityManager();
     }
 }
