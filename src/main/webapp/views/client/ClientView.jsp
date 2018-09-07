@@ -29,7 +29,7 @@
         <%--@elvariable id="clients" type="java.util.List"--%>
         <c:forEach items="${clients}" var="client" varStatus="status">
             <tr valign="top">
-                <td><c: if${client.clientName}</td>
+                <td>${client.clientName}</td>
                 <td>${client.petName}</td>
                 <td>${client.kindOfPet}</td>
                 <td>
