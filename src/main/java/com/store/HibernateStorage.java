@@ -43,15 +43,30 @@ public class HibernateStorage implements Storage {
 
     @Override
     synchronized public void add(Client client) {
+        client.setId(0);
+        addClient(client);
+        client.setId(getClientLastID());
+        client.getPet().setOwnerID(client.getId());
+        client.getPet().setKindOfPet(client.getKindOfPet());
+        addPet(client);
+    }
+
+    synchronized private void addClient(Client client) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
-            client.setId(getLastId());
-            client.getPet().setId(0);
-            client.getPet().setOwnerID(client.getId());
-            client.getPet().setKindOfPet(client.getKindOfPet());
             entityManager.getTransaction().begin();
             entityManager.persist(client);
-            //entityManager.persist(client.getPet());
+        }finally {
+            entityManager.getTransaction().commit();
+            entityManager.close();
+        }
+    }
+
+    synchronized private void addPet(Client client) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(client.getPet());
         }finally {
             entityManager.getTransaction().commit();
             entityManager.close();
