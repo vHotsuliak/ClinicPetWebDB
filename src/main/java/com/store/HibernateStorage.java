@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.Collection;
+import java.util.List;
 
 public class HibernateStorage implements Storage {
     private final EntityManagerFactory entityManagerFactory;
@@ -41,18 +42,20 @@ public class HibernateStorage implements Storage {
     }
 
     @Override
-    public void add(Client client) {
+    synchronized public void add(Client client) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
+            client.setId(getLastId());
+            client.getPet().setId(0);
+            client.getPet().setOwnerID(client.getId());
+            client.getPet().setKindOfPet(client.getKindOfPet());
             entityManager.getTransaction().begin();
             entityManager.persist(client);
-            client.getPet().setKindOfPet(client.getKindOfPet());
-            entityManager.persist(client.getPet());
+            //entityManager.persist(client.getPet());
         }finally {
             entityManager.getTransaction().commit();
             entityManager.close();
         }
-
     }
 
     @Override
@@ -82,5 +85,16 @@ public class HibernateStorage implements Storage {
 
     public EntityManager getEntityManager(){
         return entityManagerFactory.createEntityManager();
+    }
+
+    private int getClientLastID() {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            entityManager.getTransaction().begin();
+            return  (int) entityManager.createQuery("select max(id) from  Client").getResultList().get(0);
+        }finally {
+            entityManager.getTransaction().commit();
+            entityManager.close();
+        }
     }
 }

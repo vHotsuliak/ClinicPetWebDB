@@ -6,11 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="SimpleHibernateConnection">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2c0aa064-c54d-4eb3-a677-c05b88af6b87.xml" beforeDir="false" />
+    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="JSP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/client/ClientView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/client/ClientView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,7 +100,7 @@
     <session id="2119520202">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="39" />
+          <entry key="project.closed" value="40" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.100" value="1" />
@@ -117,6 +115,7 @@
           <entry key="project.open.time.117" value="1" />
           <entry key="project.open.time.121" value="1" />
           <entry key="project.open.time.123" value="1" />
+          <entry key="project.open.time.125" value="1" />
           <entry key="project.open.time.130" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.19" value="2" />
@@ -137,19 +136,19 @@
           <entry key="project.open.time.87" value="1" />
           <entry key="project.open.time.98" value="1" />
           <entry key="project.open.time.99" value="1" />
-          <entry key="project.opened" value="41" />
+          <entry key="project.opened" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="clients" value="7" />
+          <entry key="clients" value="8" />
           <entry key="html" value="4" />
           <entry key="iml" value="1" />
-          <entry key="java" value="104" />
+          <entry key="java" value="107" />
           <entry key="jsp" value="7" />
           <entry key="md" value="1" />
-          <entry key="pets" value="5" />
+          <entry key="pets" value="6" />
           <entry key="properties" value="3" />
           <entry key="sql" value="5" />
           <entry key="xml" value="21" />
@@ -158,10 +157,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="Database Element" value="12" />
+          <entry key="Database Element" value="14" />
           <entry key="HTML" value="4" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="104" />
+          <entry key="JAVA" value="107" />
           <entry key="JSP" value="7" />
           <entry key="Markdown" value="1" />
           <entry key="Properties" value="3" />
@@ -173,18 +172,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="29" />
-          <entry key="java" value="2103" />
+          <entry key="java" value="2299" />
           <entry key="jsp" value="24" />
           <entry key="sql" value="33" />
-          <entry key="txt" value="121" />
+          <entry key="txt" value="124" />
           <entry key="xml" value="195" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2103" />
+          <entry key="JAVA" value="2299" />
           <entry key="JSP" value="24" />
-          <entry key="PLAIN_TEXT" value="121" />
+          <entry key="PLAIN_TEXT" value="124" />
           <entry key="SQL" value="33" />
           <entry key="Scratch" value="29" />
           <entry key="XML" value="195" />
@@ -197,78 +196,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="24" column="14" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2107#2108#0" expanded="true" />
-                <element signature="e#2151#2152#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/store/UserCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="e#288#289#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#511#512#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/models/pets/Pet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/servlets/ClientViewServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/client/ClientView.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <entry file="das://e8963a8b-e342-43e3-846e-2fcc7cc4d669/database/Clinic/schema/public/table/clients">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -285,22 +217,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="408">
+              <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#373#374#0" expanded="true" />
                 <element signature="e#469#470#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://e8963a8b-e342-43e3-846e-2fcc7cc4d669/database/Clinic/schema/public/table/clients">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -391,9 +314,9 @@
         <option value="$PROJECT_DIR$/src/main/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" />
         <option value="$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/client/ClientView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" />
       </list>
     </option>
   </component>
@@ -832,7 +755,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -874,53 +796,13 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -928,7 +810,7 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536260310614" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536350839907" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -1231,7 +1113,8 @@
       <workItem from="1536160455607" duration="729000" />
       <workItem from="1536252255300" duration="7153000" />
       <workItem from="1536341325674" duration="611000" />
-      <workItem from="1536342393480" duration="3179000" />
+      <workItem from="1536342393480" duration="3956000" />
+      <workItem from="1536423382572" duration="4575000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1533758420274</created>
@@ -1387,7 +1270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536260278676</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="JSP">
+      <created>1536346691658</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1536346691659</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1423,7 +1313,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="327559000" />
+    <option name="totallyTimeSpent" value="332911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1435,9 +1325,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4566787" visible="true" weight="0.20415778" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.453958" visible="true" weight="0.20628998" />
       <window_info id="Structure" order="1" sideWeight="0.5010846" side_tool="true" weight="0.2803838" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1445,11 +1336,11 @@
       <window_info id="Favorites" order="5" sideWeight="0.5010846" side_tool="true" weight="0.2803838" />
       <window_info id="Web" order="6" sideWeight="0.5010846" side_tool="true" weight="0.2803838" />
       <window_info id="Image Layers" order="7" />
-      <window_info id="Persistence" order="8" sideWeight="0.5433213" side_tool="true" visible="true" weight="0.20415778" />
+      <window_info id="Persistence" order="8" sideWeight="0.546042" side_tool="true" visible="true" weight="0.20628998" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286334" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991323" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286334" />
@@ -1467,7 +1358,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.49919224" weight="0.14285715" />
-      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.12686567" />
+      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.12686567" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -1537,7 +1428,8 @@
     <MESSAGE value="Client.java" />
     <MESSAGE value="project structure + JPA" />
     <MESSAGE value="SimpleHibernateConnection" />
-    <option name="LAST_COMMIT_MESSAGE" value="SimpleHibernateConnection" />
+    <MESSAGE value="JSP" />
+    <option name="LAST_COMMIT_MESSAGE" value="JSP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1556,7 +1448,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java</url>
-          <line>21</line>
+          <line>22</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
@@ -1570,7 +1462,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java</url>
-          <line>43</line>
+          <line>44</line>
           <properties class="com.store.HibernateStorage" method="add">
             <option name="EMULATED" value="true" />
           </properties>
@@ -1661,13 +1553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlets/Demo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1810,24 +1695,24 @@
     <entry file="file://$PROJECT_DIR$/ClinicPetWebDB.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2107#2108#0" expanded="true" />
-            <element signature="e#2151#2152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SimpleHibernateConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/store/UserCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1839,17 +1724,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://e8963a8b-e342-43e3-846e-2fcc7cc4d669/database/Clinic/schema/public/table/clients">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlets/ClientViewServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="das://e8963a8b-e342-43e3-846e-2fcc7cc4d669/database/Clinic/schema/public/table/pets">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlets/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1860,10 +1745,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/client/ClientView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1435">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2107#2108#0" expanded="true" />
+            <element signature="e#2151#2152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="408">
+          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
@@ -1872,29 +1776,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/store/UserCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#511#512#0" expanded="true" />
-          </folding>
+    <entry file="das://e8963a8b-e342-43e3-846e-2fcc7cc4d669/database/Clinic/schema/public/table/pets">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/client/ClientView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/servlets/ClientViewServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+    <entry file="das://e8963a8b-e342-43e3-846e-2fcc7cc4d669/database/Clinic/schema/public/table/clients">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
