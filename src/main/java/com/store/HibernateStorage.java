@@ -6,8 +6,8 @@ import com.models.pets.Pet;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.util.Collection;
-import java.util.List;
 
 public class HibernateStorage implements Storage {
     private final EntityManagerFactory entityManagerFactory;
@@ -80,12 +80,31 @@ public class HibernateStorage implements Storage {
 
     @Override
     public void delete(int id) {
-
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            entityManager.getTransaction().begin();
+            Client client = entityManager.find(Client.class, id);
+            entityManager.remove(client.getPet());
+            entityManager.remove(client);
+        }finally {
+            entityManager.getTransaction().commit();
+            entityManager.close();
+        }
     }
 
     @Override
     public Client get(int id) {
-        return null;
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            entityManager.getTransaction().begin();
+            Client client = entityManager.find(Client.class, id);
+            Query query = entityManager.createQuery("select id from Pet p where  p.ownerID = (:ownerId)");
+            client.setPet(entityManager.find(Pet.class, query.setParameter("ownerId", id).getResultList().get(0)));
+            return client;
+        }finally {
+            entityManager.getTransaction().commit();
+            entityManager.close();
+        }
     }
 
     @Override

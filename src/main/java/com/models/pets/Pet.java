@@ -29,6 +29,12 @@ public class Pet {
 	public Pet() {
 	}
 
+	public Pet(int ownerID, String kindOfPet, String petName) {
+		this.ownerID = ownerID;
+		this.kindOfPet = kindOfPet;
+		this.petName = petName;
+	}
+
 	/**
 	 * Creation of pet name.
 	 * @param petName contains pet name.
