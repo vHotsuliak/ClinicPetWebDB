@@ -17,8 +17,8 @@ public class UserCache implements Storage{
 
 
     @Override
-    public int getLastId() {
-        return this.storage.getLastId();
+    public int getClientLastID() {
+        return this.storage.getClientLastID();
     }
 
     @Override

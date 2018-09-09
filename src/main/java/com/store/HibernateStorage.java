@@ -36,22 +36,17 @@ public class HibernateStorage implements Storage {
        }
     }
 
-    @Override
-    public int getLastId() {
-        return 0;
-    }
 
     @Override
-    synchronized public void add(Client client) {
+    public void add(final Client client) {
         client.setId(0);
         addClient(client);
-        client.setId(getClientLastID());
-        client.getPet().setOwnerID(client.getId());
-        client.getPet().setKindOfPet(client.getKindOfPet());
+        //it's need to connect correctly client and pet
+        client.getPet().setOwnerID(getClientLastID());
         addPet(client);
     }
 
-    synchronized private void addClient(Client client) {
+    synchronized private void addClient(final Client client) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             entityManager.getTransaction().begin();
@@ -62,7 +57,7 @@ public class HibernateStorage implements Storage {
         }
     }
 
-    synchronized private void addPet(Client client) {
+    synchronized private void addPet(final Client client) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             entityManager.getTransaction().begin();
@@ -74,26 +69,39 @@ public class HibernateStorage implements Storage {
     }
 
     @Override
-    public void edit(Client client) {
-
-    }
-
-    @Override
-    public void delete(int id) {
+    public void edit(final Client client) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
+            //without this, a pet has default id and because will be created new pet in table
+            Client client1 = this.get(client.getId());
+            client.getPet().setId(client1.getId());
+            //---------------------------------------
             entityManager.getTransaction().begin();
-            Client client = entityManager.find(Client.class, id);
-            entityManager.remove(client.getPet());
-            entityManager.remove(client);
-        }finally {
+            entityManager.merge(client.getPet());
+            entityManager.merge(client);
+        } finally {
             entityManager.getTransaction().commit();
             entityManager.close();
         }
     }
 
     @Override
-    public Client get(int id) {
+    public void delete(final int id) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            entityManager.getTransaction().begin();
+            Client client = this.get(id);
+            Pet pet = client.getPet();
+            entityManager.remove(entityManager.contains(pet) ? pet : entityManager.merge(pet));
+            entityManager.remove(entityManager.contains(client) ? client : entityManager.merge(client));
+        } finally {
+            entityManager.getTransaction().commit();
+            entityManager.close();
+        }
+    }
+
+    @Override
+    public Client get(final int id) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             entityManager.getTransaction().begin();
@@ -121,7 +129,8 @@ public class HibernateStorage implements Storage {
         return entityManagerFactory.createEntityManager();
     }
 
-    private int getClientLastID() {
+    @Override
+    public int getClientLastID() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             entityManager.getTransaction().begin();

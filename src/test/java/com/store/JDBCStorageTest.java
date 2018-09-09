@@ -15,7 +15,7 @@ public class JDBCStorageTest {
     @Test
     public void addAndDelete() {
         int size = this.jdbcStorage.values().size();
-        int lastId = this.jdbcStorage.getLastId();
+        int lastId = this.jdbcStorage.getClientLastID();
         this.jdbcStorage.add(new Client(lastId + 1, "test", new Pet("test")));
         assertEquals(size + 1, this.jdbcStorage.values().size());
         this.jdbcStorage.delete(lastId + 1);
@@ -24,7 +24,7 @@ public class JDBCStorageTest {
 
     @Test
     public void get() {
-        int lastId = this.jdbcStorage.getLastId();
+        int lastId = this.jdbcStorage.getClientLastID();
         int size = this.jdbcStorage.values().size();
         this.jdbcStorage.add(new Client(lastId + 1, "test", new Pet("test")));
         assertEquals(new Client(lastId + 1, "test", new Pet("test")), this.jdbcStorage.get(lastId + 1));
@@ -34,7 +34,7 @@ public class JDBCStorageTest {
 
     @Test
     public void edit() {
-        int lastId = this.jdbcStorage.getLastId();
+        int lastId = this.jdbcStorage.getClientLastID();
         int size = this.jdbcStorage.values().size();
         this.jdbcStorage.add(new Client(lastId + 1, "test", new Pet("test")));
         this.jdbcStorage.edit(new Client(lastId + 1, "test0", new Pet("test0")));
@@ -45,7 +45,7 @@ public class JDBCStorageTest {
 
     @Test
     public void searchClient() {
-        int lastId = this.jdbcStorage.getLastId();
+        int lastId = this.jdbcStorage.getClientLastID();
         int size = this.jdbcStorage.values().size();
         List<Client> clients = new ArrayList<>();
         clients.add(new Client(lastId + 1, "searchClientTestValue", new Pet("searchClientTestValue")));

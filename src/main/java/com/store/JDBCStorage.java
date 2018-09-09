@@ -335,7 +335,7 @@ public class JDBCStorage implements Storage {
      * Return last client id.
      * @return last client id.
      */
-    public int getLastId(){return this.idsClint.get();}
+    public int getClientLastID(){return this.idsClint.get();}
 
     /**
      * Close connection to database.

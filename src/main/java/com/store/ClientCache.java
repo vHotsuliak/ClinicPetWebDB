@@ -15,7 +15,7 @@ public class ClientCache implements Storage{
 
     // Needed for JDBC
     @Override
-    public int getLastId() {
+    public int getClientLastID() {
         return 0;
     }
 

@@ -38,6 +38,9 @@ public class Client {
         this.id = id;
         this.clientName = clientName;
         this.pet = pet;
+        this.pet.setOwnerID(this.id);
+        this.pet.setKindOfPet(pet instanceof Cat ? "Cat" :
+                                    pet instanceof Dog ? "Dog" : "Pet");
     }
 
     /**
@@ -61,12 +64,9 @@ public class Client {
      * @return kind of pet
      */
     public String getKindOfPet() {
-        String kind = "Pet";
-        if (this.pet instanceof Cat)
-            kind = "Cat";
-        else  if (this.pet instanceof Dog)
-            kind = "Dog";
-        return kind;
+        return this.pet instanceof Cat ? "Cat"
+                    : this.pet instanceof Dog ? "Dog"
+                        : "Pet";
     }
 
 

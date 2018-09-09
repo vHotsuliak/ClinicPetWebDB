@@ -25,8 +25,8 @@
             <input type="text" name="petName" value="${client.petName}"><br><br>
             Kind of pet:<br/>
             <select size = "1" required size = "1" name = "kindOfPet">
+                <option value = "Pet">Pet</option>
                 <option value = "Cat">Cat</option>
-                <option value = "Bird">Pet</option>
                 <option value = "Dog">Dog</option>
             </select><br/>
             <input type="submit" value="Submit">

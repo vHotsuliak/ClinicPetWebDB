@@ -96,7 +96,7 @@ public class AVCDESClientServletsTest extends Mockito {
         HttpServletResponse response = mock(HttpServletResponse.class);
         RequestDispatcher dispatcher = mock(RequestDispatcher.class);
 
-        int lastId  = this.USER_CACHE.getLastId();
+        int lastId  = this.USER_CACHE.getClientLastID();
 
         USER_CACHE.add(new Client(lastId + 1, "Test", new Pet("Test")));
 
@@ -156,7 +156,7 @@ public class AVCDESClientServletsTest extends Mockito {
         assertEquals(size + 1, this.USER_CACHE.values().size());
 
         when(request.getRequestDispatcher("/views/client/DeleteClient.jsp")).thenReturn(dispatcher);
-        when(request.getParameter("id")).thenReturn(String.valueOf(this.USER_CACHE.getLastId()));
+        when(request.getParameter("id")).thenReturn(String.valueOf(this.USER_CACHE.getClientLastID()));
 
         verify(request, atLeast(0)).getParameter("id");
         verify(dispatcher, atLeast(0)).forward(request, response);
@@ -186,7 +186,7 @@ public class AVCDESClientServletsTest extends Mockito {
         HttpServletResponse response = mock(HttpServletResponse.class);
         RequestDispatcher dispatcher = mock(RequestDispatcher.class);
 
-        int lastId  = this.USER_CACHE.getLastId();
+        int lastId  = this.USER_CACHE.getClientLastID();
 
         when(request.getRequestDispatcher("/views/client/EditClient.jsp")).thenReturn(dispatcher);
         when(request.getParameter("id")).thenReturn(String.valueOf(lastId + 1));
@@ -214,7 +214,7 @@ public class AVCDESClientServletsTest extends Mockito {
         HttpServletResponse response = mock(HttpServletResponse.class);
         RequestDispatcher dispatcher = mock(RequestDispatcher.class);
 
-        int lastId  = this.USER_CACHE.getLastId();
+        int lastId  = this.USER_CACHE.getClientLastID();
 
         this.USER_CACHE.add(new Client(lastId + 1 ,"test0", new Dog("test0")));
 

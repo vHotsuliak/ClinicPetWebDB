@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface Storage {
 
-     int getLastId();
+     int getClientLastID();
 
      Collection<Client> values();
 
