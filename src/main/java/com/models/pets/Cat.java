@@ -1,5 +1,8 @@
 package com.models.pets;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Cat extends Pet {
 	/**
 	 *  Creation of cat name
@@ -9,7 +12,11 @@ public class Cat extends Pet {
 		super(catName);
 	}
 
-	@Override
+    public Cat() {
+	    super();
+    }
+
+    @Override
 	public boolean equals(Object o) {
 		return super.equals(o);
 	}

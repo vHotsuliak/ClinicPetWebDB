@@ -1,7 +1,8 @@
 package com.models.pets;
 
+import javax.persistence.Entity;
 
-
+@Entity
 public class Dog extends Pet {
 	/**
 	 * Creation of dog name
@@ -9,6 +10,10 @@ public class Dog extends Pet {
 	 */
 	public Dog(String dogName) {
 		super(dogName);
+	}
+
+	public Dog() {
+		super();
 	}
 
 	@Override
