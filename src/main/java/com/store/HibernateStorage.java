@@ -14,7 +14,7 @@ import java.util.List;
 public class HibernateStorage implements Storage {
     private final EntityManagerFactory entityManagerFactory;
 
-    public HibernateStorage() {
+    HibernateStorage() {
         entityManagerFactory = Persistence.createEntityManagerFactory("clinicHibernate");
     }
 
@@ -22,6 +22,7 @@ public class HibernateStorage implements Storage {
      * Return list of all clients.
      * @return list of all clients.
      */
+    @SuppressWarnings("unchecked")
     @Override
     public Collection<Client> values() {
        EntityManager entityManager = this.entityManagerFactory.createEntityManager();
@@ -96,9 +97,14 @@ public class HibernateStorage implements Storage {
         try {
             //without this, a pet has default id and because will be created new pet in table
             Client client1 = this.get(client.getId());
-            client.getPet().setId(client1.getId());
+            client.getPet().setId(client1.getPet().getId());
+            client.getPet().setKindOfPet(client.getKindOfPet());
             //---------------------------------------
             entityManager.getTransaction().begin();
+            // Without this cannot change kind of pet. Without this will create new pet in database and old will stay in the database
+            Pet pet = client1.getPet();
+            entityManager.remove(entityManager.contains(pet) ? pet : entityManager.merge(pet));
+            //----------------------------------------------------------------------------------
             entityManager.merge(client.getPet());
             entityManager.merge(client);
         } finally {
@@ -198,10 +204,6 @@ public class HibernateStorage implements Storage {
         final List<Client> clients = new ArrayList<>();
 
         return clients;
-    }
-
-    public EntityManager getEntityManager(){
-        return entityManagerFactory.createEntityManager();
     }
 
     /**
