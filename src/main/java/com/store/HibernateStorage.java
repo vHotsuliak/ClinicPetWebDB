@@ -44,22 +44,16 @@ public class HibernateStorage implements Storage {
     @SuppressWarnings("unchecked")
     @Override
     public Collection<Client> values() {
-       EntityManager entityManager = this.entityManagerFactory.createEntityManager();
-       entityManager.getTransaction().begin();
-       try {
-           Collection<Client> clients = entityManager.createQuery("from Client").getResultList();
-           Collection<Pet> pets = entityManager.createQuery("from Pet ").getResultList();
-           for (Client client : clients)
-               for (Pet pet : pets)
-                   if (client.getId() == pet.getOwnerID()) {
-                       client.setPet(pet);
-                       continue;
-                   }
-           return clients;
-       }finally {
-           entityManager.getTransaction().commit();
-           entityManager.close();
-       }
+       return transaction((EntityManager entityManager) -> {
+               Collection<Client> clients = entityManager.createQuery("from Client").getResultList();
+               Collection<Pet> pets = entityManager.createQuery("from Pet ").getResultList();
+               for (Client client : clients)
+                   for (Pet pet : pets)
+                       if (client.getId() == pet.getOwnerID()) {
+                           client.setPet(pet);
+                           continue;
+                       }
+               return clients;});
     }
 
 
@@ -81,14 +75,10 @@ public class HibernateStorage implements Storage {
      * @param client contains client
      */
     synchronized private void addClient(final Client client) {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        try {
-            entityManager.getTransaction().begin();
+        transaction(entityManager -> {
             entityManager.persist(client);
-        }finally {
-            entityManager.getTransaction().commit();
-            entityManager.close();
-        }
+            return null;
+        });
     }
 
     /**
@@ -96,14 +86,10 @@ public class HibernateStorage implements Storage {
      * @param client contains client
      */
     synchronized private void addPet(final Client client) {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        try {
-            entityManager.getTransaction().begin();
+        transaction(entityManager -> {
             entityManager.persist(client.getPet());
-        }finally {
-            entityManager.getTransaction().commit();
-            entityManager.close();
-        }
+            return null;
+        });
     }
 
     /**
@@ -112,24 +98,20 @@ public class HibernateStorage implements Storage {
      */
     @Override
     public void edit(final Client client) {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        try {
+        transaction(entityManager -> {
             //without this, a pet has default id and because will be created new pet in table
             Client client1 = this.get(client.getId());
             client.getPet().setId(client1.getPet().getId());
             client.getPet().setKindOfPet(client.getKindOfPet());
             //---------------------------------------
-            entityManager.getTransaction().begin();
             // Without this cannot change kind of pet. Without this will create new pet in database and old will stay in the database
             Pet pet = client1.getPet();
             entityManager.remove(entityManager.contains(pet) ? pet : entityManager.merge(pet));
             //----------------------------------------------------------------------------------
             entityManager.merge(client.getPet());
             entityManager.merge(client);
-        } finally {
-            entityManager.getTransaction().commit();
-            entityManager.close();
-        }
+            return null;
+        });
     }
 
     /**
@@ -138,17 +120,13 @@ public class HibernateStorage implements Storage {
      */
     @Override
     public void delete(final int id) {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        try {
-            entityManager.getTransaction().begin();
+        transaction(entityManager -> {
             Client client = this.get(id);
             Pet pet = client.getPet();
             entityManager.remove(entityManager.contains(pet) ? pet : entityManager.merge(pet));
             entityManager.remove(entityManager.contains(client) ? client : entityManager.merge(client));
-        } finally {
-            entityManager.getTransaction().commit();
-            entityManager.close();
-        }
+            return null;
+        });
     }
 
     /**
@@ -158,17 +136,12 @@ public class HibernateStorage implements Storage {
      */
     @Override
     public Client get(final int id) {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        try {
-            entityManager.getTransaction().begin();
+        return transaction(entityManager -> {
             Client client = entityManager.find(Client.class, id);
             Query query = entityManager.createQuery("select id from Pet p where  p.ownerID = (:ownerId)");
             client.setPet(entityManager.find(Pet.class, query.setParameter("ownerId", id).getResultList().get(0)));
             return client;
-        }finally {
-            entityManager.getTransaction().commit();
-            entityManager.close();
-        }
+        });
     }
 
 
@@ -231,14 +204,7 @@ public class HibernateStorage implements Storage {
      */
     @Override
     public int getClientLastID() {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        try {
-            entityManager.getTransaction().begin();
-            return  (int) entityManager.createQuery("select max(id) from  Client").getResultList().get(0);
-        }finally {
-            entityManager.getTransaction().commit();
-            entityManager.close();
-        }
+        return transaction(entityManager -> (int) entityManager.createQuery("select max(id) from  Client").getResultList().get(0));
     }
 
     /**
