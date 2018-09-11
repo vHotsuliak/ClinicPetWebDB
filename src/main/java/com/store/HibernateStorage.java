@@ -19,6 +19,25 @@ public class HibernateStorage implements Storage {
     }
 
     /**
+     * Interface for  lambda excretion
+     * @param <T> generic type
+     */
+    public interface Command<T> {
+        T process(EntityManager entityManager);
+    }
+
+
+    private <T> T transaction(Command<T> command) {
+        final EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        try {
+            return command.process(entityManager);
+        } finally {
+            entityManager.getTransaction().commit();
+            entityManager.close();
+        }
+    }
+    /**
      * Return list of all clients.
      * @return list of all clients.
      */
