@@ -65,7 +65,7 @@ public class HibernateStorage implements Storage {
     public void add(final Client client) {
         client.setId(0);
         addClient(client);
-        //it's need to connect correctly client and pet
+        //it is necessary for the correct connection of the client and the pet
         client.getPet().setOwnerID(getClientLastID());
         addPet(client);
     }
@@ -155,47 +155,51 @@ public class HibernateStorage implements Storage {
     @Override
     public Collection<Client> searchClient(final String clientName, final String petName, final String kindOfPet) {
         List<Client> clients = new ArrayList<>();
-
-        return clients;
-    }
-
-
-    /**
-     * Searching clients by one parameter.
-     * @param condition1 1st condition.
-     * @param SQLSearchRequest contains SQL search request with one parameter.
-     * @return list of clients with this parameter.
-     */
-    private List<Client> oneCondition(final String condition1, final String SQLSearchRequest) {
-        final List<Client> clients = new ArrayList<>();
-
-        return clients;
-    }
-
-    /**
-     * Searching clients by two parameters.
-     * @param condition1 1st condition.
-     * @param condition2 2nd condition.
-     * @param SQLSearchRequest contains SQL search request with two parameters.
-     * @return list of clients with these parameters.
-     */
-    private List<Client> twoCondition(String condition1, String condition2, String SQLSearchRequest) {
-        final List<Client> clients = new ArrayList<>();
-
+        if( !(clientName.isEmpty() && petName.isEmpty() && kindOfPet.isEmpty())) {
+            clients = searchClientByName(clientName);
+            List<Pet> pets = searchPet(kindOfPet, petName);
+            for (int i = 0, size = clients.size(); i < size; i++ ) {
+                for (Pet pet : pets) {
+                    if (clients.get(i).getId() == pet.getOwnerID()) {
+                        clients.get(i).setPet(pet);
+                        continue;
+                    }
+                }
+                if (clients.get(i).getPet() == null){
+                    clients.remove(i);
+                    i--; size--;
+                }
+            }
+        }
         return clients;
     }
 
     /**
-     * Searching clients by three parameters.
-     * @param condition1 1st condition.
-     * @param condition2 2nd condition.
-     * @param condition3 3rd condition.
-     * @return list of clients with these parameters.
+     * Searching pets by one or two of this parameters, if both of parameters are empty then return full list of pet.
+     * @param kindOfPet kind of pet
+     * @param petName pet name
+     * @return requested list of pet if both parameters aren't empty, else full list of pet.
      */
-    private List<Client> threeCondition(String condition1, String condition2, String condition3) {
-        final List<Client> clients = new ArrayList<>();
+    private List<Pet> searchPet(String kindOfPet, String petName) {
+        return transaction(entityManager -> !kindOfPet.isEmpty() && petName.isEmpty() ?
+                entityManager.createQuery("from Pet p where p.kindOfPet = :kindOfPet").setParameter("kindOfPet", kindOfPet).getResultList()
+                : !petName.isEmpty() && kindOfPet.isEmpty() ?
+                    entityManager.createQuery("from Pet p where p.petName = :petName").setParameter("petName", petName).getResultList()
+                    : !(kindOfPet.isEmpty() && petName.isEmpty()) ?
+                        entityManager.createQuery("from Pet p where p.kindOfPet = :kindOfPet and p.petName = :petName")
+                            .setParameter("kindOfPet", kindOfPet).setParameter("petName", petName).getResultList()
+                        : entityManager.createQuery("from Pet").getResultList());
+    }
 
-        return clients;
+    /**
+     * Searching clients by mame passed as parameter. If parameter is empty then return full list of clients.
+     * @param clientName client name
+     * @return requested list of clients. If parameter is empty then return full list of clients.
+     */
+    private List<Client> searchClientByName(String clientName) {
+        return transaction(entityManager -> !clientName.isEmpty() ?
+                entityManager.createQuery("from Client c where c.clientName = :clientName").setParameter("clientName", clientName).getResultList()
+                : entityManager.createQuery("from Client").getResultList());
     }
 
     /**
