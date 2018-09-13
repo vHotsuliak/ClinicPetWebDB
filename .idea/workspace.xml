@@ -6,10 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="HibernateStorage.java">
+    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="HibernateStorage.java, search">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/store/HibernateStorageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/client/SearchClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/client/SearchClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/store/UserCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/store/UserCache.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -155,7 +155,7 @@
           <entry key="clients" value="14" />
           <entry key="html" value="4" />
           <entry key="iml" value="1" />
-          <entry key="java" value="149" />
+          <entry key="java" value="151" />
           <entry key="jsp" value="13" />
           <entry key="md" value="1" />
           <entry key="pets" value="13" />
@@ -170,7 +170,7 @@
           <entry key="Database Element" value="27" />
           <entry key="HTML" value="4" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="149" />
+          <entry key="JAVA" value="151" />
           <entry key="JSP" value="13" />
           <entry key="Markdown" value="1" />
           <entry key="Properties" value="3" />
@@ -182,18 +182,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="29" />
-          <entry key="java" value="5448" />
+          <entry key="java" value="5462" />
           <entry key="jsp" value="59" />
           <entry key="sql" value="33" />
-          <entry key="txt" value="233" />
+          <entry key="txt" value="242" />
           <entry key="xml" value="195" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5448" />
+          <entry key="JAVA" value="5462" />
           <entry key="JSP" value="59" />
-          <entry key="PLAIN_TEXT" value="233" />
+          <entry key="PLAIN_TEXT" value="242" />
           <entry key="SQL" value="33" />
           <entry key="Scratch" value="29" />
           <entry key="XML" value="195" />
@@ -215,11 +215,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="190" column="80" lean-forward="true" selection-start-line="190" selection-start-column="80" selection-end-line="190" selection-end-column="80" />
+            <state relative-caret-position="221">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#8200#8201#0" expanded="true" />
@@ -230,19 +230,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/store/HibernateStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5016">
-              <caret line="33" column="121" selection-start-line="33" selection-start-column="121" selection-end-line="33" selection-end-column="121" />
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/store/JDBCStorageTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="986">
+              <caret line="67" column="5" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="149" selection-start-line="149" selection-end-line="149" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/store/UserCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="153">
+              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
               <folding>
                 <element signature="e#479#480#0" expanded="true" />
                 <element signature="e#523#524#0" expanded="true" />
@@ -259,8 +277,8 @@
         <option value="Interface" />
         <option value="JavaScript File" />
         <option value="Tag Library Descriptor" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -293,7 +311,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/models/pets/CreatePet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/store/UserStorage.java" />
         <option value="$PROJECT_DIR$/target/classes/parsentev.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/servlets/AddClientServlet.java" />
@@ -336,7 +353,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/views/client/ClientView.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/client/AddClient.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/client/EditClient.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/store/UserCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/store/Storage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/pets/Cat.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/pets/Dog.java" />
@@ -344,6 +360,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/models/Client.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/client/SearchClient.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/store/HibernateStorageTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/store/UserCache.java" />
       </list>
     </option>
   </component>
@@ -823,74 +841,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="pets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -904,7 +855,7 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536521208564" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536871165007" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -932,20 +883,10 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.store" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources" />
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main" />
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\META-INF" />
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\com\models\pets" />
-      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\com\models" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
       <recent name="" />
       <recent name="com.models" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main" />
@@ -953,6 +894,16 @@
       <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\java\com\models" />
       <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\META-INF" />
       <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\java\com\models\pets" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources" />
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main" />
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\META-INF" />
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\com\models\pets" />
+      <recent name="E:\Java\workspaceIntel\ClinicPetWebDB\src\main\resources\com\models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -967,7 +918,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat">
+  <component name="RunManager" selected="JUnit.JDBCStorageTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -984,6 +935,51 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HibernateStorageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClinicPetWebDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.store" />
+      <option name="MAIN_CLASS_NAME" value="com.store.HibernateStorageTest" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBCStorageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClinicPetWebDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.store" />
+      <option name="MAIN_CLASS_NAME" value="com.store.JDBCStorageTest" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBCStorageTest,addAndDelete and 4 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ClinicPetWebDB" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <patterns>
+        <pattern testClass="com.store.JDBCStorageTest,addAndDelete" />
+        <pattern testClass="com.store.JDBCStorageTest,get" />
+        <pattern testClass="com.store.JDBCStorageTest,edit" />
+        <pattern testClass="com.store.JDBCStorageTest,searchClient" />
+        <pattern testClass="com.store.JDBCStorageTest,close" />
+      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1076,9 +1072,15 @@
     <list>
       <item itemvalue="Tomcat Server.Tomcat" />
       <item itemvalue="Application.SimpleHibernateConnection" />
+      <item itemvalue="JUnit.HibernateStorageTest" />
+      <item itemvalue="JUnit.JDBCStorageTest,addAndDelete and 4 more" />
+      <item itemvalue="JUnit.JDBCStorageTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JDBCStorageTest" />
+        <item itemvalue="JUnit.JDBCStorageTest,addAndDelete and 4 more" />
+        <item itemvalue="JUnit.HibernateStorageTest" />
         <item itemvalue="Application.SimpleHibernateConnection" />
       </list>
     </recent_temporary>
@@ -1219,7 +1221,7 @@
       <workItem from="1536685524397" duration="5369000" />
       <workItem from="1536771350841" duration="1901000" />
       <workItem from="1536856467465" duration="802000" />
-      <workItem from="1536862377504" duration="7443000" />
+      <workItem from="1536862377504" duration="8230000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1533758420274</created>
@@ -1438,22 +1440,17 @@
       <option name="project" value="LOCAL" />
       <updated>1536694643735</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="HibernateStorage.java, search">
+      <created>1536870520249</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1536870520250</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JDBCStorageTest - 2018.08.26 at 14h 08m 40s.xml">
-      <configuration name="JDBCStorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JDBCStorageTest - 2018.08.26 at 14h 08m 48s.xml">
-      <configuration name="JDBCStorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JDBCStorageTest - 2018.08.26 at 14h 09m 47s.xml">
-      <configuration name="JDBCStorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="JDBCStorageTest - 2018.08.26 at 14h 10m 02s.xml">
-      <configuration name="JDBCStorageTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AVCDESClientServletsTest - 2018.08.26 at 14h 10m 35s.xml">
       <configuration name="AVCDESClientServletsTest" configurationId="JUnit" />
     </history-entry>
@@ -1472,9 +1469,21 @@
     <history-entry file="JDBCStorageTest - 2018.08.28 at 21h 01m 43s.xml">
       <configuration name="JDBCStorageTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="HibernateStorageTest - 2018.09.13 at 23h 30m 56s.xml">
+      <configuration name="HibernateStorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JDBCStorageTest,addAndDelete_and_4_more - 2018.09.13 at 23h 31m 30s.xml">
+      <configuration name="JDBCStorageTest,addAndDelete and 4 more" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JDBCStorageTest,addAndDelete_and_4_more - 2018.09.13 at 23h 32m 10s.xml">
+      <configuration name="JDBCStorageTest,addAndDelete and 4 more" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JDBCStorageTest,addAndDelete_and_4_more - 2018.09.13 at 23h 32m 28s.xml">
+      <configuration name="JDBCStorageTest,addAndDelete and 4 more" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="398017000" />
+    <option name="totallyTimeSpent" value="398804000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1489,7 +1498,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4404332" visible="true" weight="0.23027718" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4394184" visible="true" weight="0.23027718" />
       <window_info id="Structure" order="1" sideWeight="0.5010846" side_tool="true" weight="0.2803838" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1497,18 +1506,18 @@
       <window_info id="Favorites" order="5" sideWeight="0.5010846" side_tool="true" weight="0.2803838" />
       <window_info id="Web" order="6" sideWeight="0.5010846" side_tool="true" weight="0.2803838" />
       <window_info id="Image Layers" order="7" />
-      <window_info id="Persistence" order="8" sideWeight="0.5595668" side_tool="true" visible="true" weight="0.23027718" />
+      <window_info id="Persistence" order="8" sideWeight="0.56058156" side_tool="true" visible="true" weight="0.23027718" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286334" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991323" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286334" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3286334" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3286334" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Application Servers" order="11" weight="0.32897604" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286334" />
@@ -1569,7 +1578,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed location" />
     <MESSAGE value="ClientAndPetTest" />
     <MESSAGE value="AVCDESClientServletsTest" />
     <MESSAGE value="Pom, jdbc" />
@@ -1594,7 +1602,8 @@
     <MESSAGE value="lambda" />
     <MESSAGE value="HibernateStorage.java, re" />
     <MESSAGE value="HibernateStorage.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="HibernateStorage.java" />
+    <MESSAGE value="HibernateStorage.java, search" />
+    <option name="LAST_COMMIT_MESSAGE" value="HibernateStorage.java, search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1610,12 +1619,6 @@
           <line>9</line>
           <properties />
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java</url>
-          <line>156</line>
-          <properties />
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/servlets/EditClientServlet.java</url>
@@ -1633,7 +1636,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://08018b9b-131a-4726-bf98-0daf74ebe941/database/Clinic/schema/public/table/clients" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1691,13 +1693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/store/JDBCStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1916,32 +1911,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8200#8201#0" expanded="true" />
+            <element signature="e#8249#8250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/store/HibernateStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/store/JDBCStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="67" column="5" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/store/JDBCStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5016">
-          <caret line="33" column="121" selection-start-line="33" selection-start-column="121" selection-end-line="33" selection-end-column="121" />
+        <state relative-caret-position="343">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/store/UserCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="153">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
           <folding>
             <element signature="e#479#480#0" expanded="true" />
             <element signature="e#523#524#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="190" column="80" lean-forward="true" selection-start-line="190" selection-start-column="80" selection-end-line="190" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8200#8201#0" expanded="true" />
-            <element signature="e#8249#8250#0" expanded="true" />
           </folding>
         </state>
       </provider>
