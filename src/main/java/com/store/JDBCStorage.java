@@ -22,8 +22,8 @@ public class JDBCStorage implements Storage {
     // -----SQL commands-----
 
     //Insert
-    private final String INSERT_CLIENT                  = "INSERT into Clients VALUES ( ?, ?)";
-    private final String INSERT_PET                     = "INSERT into Pets VALUES ( ?, ?, ?, ?)";
+    private final String INSERT_CLIENT                  = "INSERT into clients VALUES ( ?, ?)";
+    private final String INSERT_PET                     = "INSERT into pets VALUES ( ?, ?, ?, ?)";
 
     // Delete
     private final String DELETE_PET                     = "Delete From Pets where client_id = ?";
@@ -64,7 +64,7 @@ public class JDBCStorage implements Storage {
             throw new IllegalStateException(e);
         }
 
-        try(final PreparedStatement statement = this.connection.prepareStatement("SELECT MAX(user_id) as max FROM Clients WHERE user_id is not null");
+        try(final PreparedStatement statement = this.connection.prepareStatement("SELECT MAX(user_id) as max FROM Clients");
             final ResultSet rsClient = statement.executeQuery()) {
                 while (rsClient.next())
                     idsClint.set(rsClient.getInt("max"));
@@ -72,7 +72,7 @@ public class JDBCStorage implements Storage {
             e.printStackTrace();
         }
 
-        try(final PreparedStatement statement = this.connection.prepareStatement("SELECT MAX(pet_id) as max FROM Pets WHERE pet_id is not null");
+        try(final PreparedStatement statement = this.connection.prepareStatement("SELECT MAX(pet_id) as max FROM Pets");
             final ResultSet rsPet = statement.executeQuery()) {
                 while (rsPet.next())
                     idsPet.set(rsPet.getInt("max"));
@@ -107,27 +107,26 @@ public class JDBCStorage implements Storage {
      */
     @Override
     public void add(Client client) {
-        addPet(new Client(createID(client), client.getClientName(),
+        addPet(new Client(createIDAndClient(client), client.getClientName(),
                 createPet(client.getKindOfPet(), client.getPetName())));
     }
 
     /**
-     * Create id for this client in database. Return client id in database.
+     * Create client in database. Create id for this client in database. Return client id in database.
      * @param client contains client data.
      * @return client id in database.
      */
-    private int createID(Client client) {
+    private int createIDAndClient(Client client) {
+        AtomicInteger ids = new AtomicInteger(idsClint.incrementAndGet());
         try(final PreparedStatement statement = this.connection.prepareStatement(INSERT_CLIENT)) {
-            AtomicInteger ids = new AtomicInteger(idsClint.incrementAndGet());
             statement.setInt(1, ids.get());
             statement.setString(2, client.getClientName());
             statement.executeUpdate();
-            return ids.get();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        throw new IllegalStateException("Could not create new user");
+        return ids.get();
     }
 
     /**
@@ -145,8 +144,6 @@ public class JDBCStorage implements Storage {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        throw new IllegalStateException("Could not create new pet");
     }
 
     /**
