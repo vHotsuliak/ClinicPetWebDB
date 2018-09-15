@@ -1,6 +1,7 @@
 package com.store;
 
 import com.models.Client;
+import com.models.pets.Dog;
 import com.models.pets.Pet;
 import org.junit.Test;
 
@@ -10,61 +11,61 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class HibernateStorageTest {
-    private final HibernateStorage jdbcStorage = new HibernateStorage();
+    private final HibernateStorage hibernateStorage = new HibernateStorage();
 
     @Test
     public void addAndDelete() {
-        int size = this.jdbcStorage.values().size();
-        int lastId = this.jdbcStorage.getClientLastID();
-        this.jdbcStorage.add(new Client(lastId + 1, "test", new Pet("test")));
-        assertEquals(size + 1, this.jdbcStorage.values().size());
-        this.jdbcStorage.delete(lastId + 1);
-        assertEquals(size, this.jdbcStorage.values().size());
+        this.hibernateStorage.add(new Client(0, "test", new Pet("test")));
+        int lastId = hibernateStorage.getClientLastID();
+        int size = hibernateStorage.values().size();
+        assertEquals(size, this.hibernateStorage.values().size());
+        this.hibernateStorage.delete(lastId);
+        assertEquals(size - 1, this.hibernateStorage.values().size());
     }
 
     @Test
     public void get() {
-        int lastId = this.jdbcStorage.getClientLastID();
-        int size = this.jdbcStorage.values().size();
-        this.jdbcStorage.add(new Client(lastId + 1, "test", new Pet("test")));
-        assertEquals(new Client(lastId + 1, "test", new Pet("test")), this.jdbcStorage.get(lastId + 1));
-        this.jdbcStorage.delete(lastId + 1);
-        assertEquals(size, this.jdbcStorage.values().size());
+        this.hibernateStorage.add(new Client(0, "test", new Pet("test")));
+        int lastId = this.hibernateStorage.getClientLastID();
+        int size = this.hibernateStorage.values().size();
+        assertEquals(new Client(lastId, "test", new Pet("test")), this.hibernateStorage.get(lastId));
+        this.hibernateStorage.delete(lastId);
+        assertEquals(size - 1, this.hibernateStorage.values().size());
     }
 
     @Test
     public void edit() {
-        int lastId = this.jdbcStorage.getClientLastID();
-        int size = this.jdbcStorage.values().size();
-        this.jdbcStorage.add(new Client(lastId + 1, "test", new Pet("test")));
-        this.jdbcStorage.edit(new Client(lastId + 1, "test0", new Pet("test0")));
-        assertEquals(new Client(lastId + 1, "test0", new Pet("test0")), this.jdbcStorage.get(lastId + 1));
-        this.jdbcStorage.delete(lastId + 1);
-        assertEquals(size, this.jdbcStorage.values().size());
+        this.hibernateStorage.add(new Client(0, "test", new Pet("test")));
+        int lastId = this.hibernateStorage.getClientLastID();
+        int size = this.hibernateStorage.values().size();
+        this.hibernateStorage.edit(new Client(lastId, "test0", new Dog("test0")));
+        assertEquals(new Client(lastId, "test0", new Dog("test0")), this.hibernateStorage.get(lastId));
+        this.hibernateStorage.delete(lastId);
+        assertEquals(size - 1, this.hibernateStorage.values().size());
     }
 
     @Test
     public void searchClient() {
-        int lastId = this.jdbcStorage.getClientLastID();
-        int size = this.jdbcStorage.values().size();
         List<Client> clients = new ArrayList<>();
-        clients.add(new Client(lastId + 1, "searchClientTestValue", new Pet("searchClientTestValue")));
-        this.jdbcStorage.add(new Client(lastId + 1, "searchClientTestValue", new Pet("searchClientTestValue")));
-        assertNotNull(this.jdbcStorage.searchClient("searchClientTestValue", "searchClientTestValue", "Pet"));
-        assertNotNull( this.jdbcStorage.searchClient("", "searchClientTestValue", "Pet"));
-        assertNotNull( this.jdbcStorage.searchClient("searchClientTestValue", "", "Pet"));
-        assertNotNull( this.jdbcStorage.searchClient("searchClientTestValue", "searchClientTestValue", ""));
-        assertNotNull( this.jdbcStorage.searchClient("searchClientTestValue", "", ""));
-        assertNotNull( this.jdbcStorage.searchClient("", "searchClientTestValue", ""));
-        assertNotEquals(0, this.jdbcStorage.searchClient("", "", "Pet").size());
+        this.hibernateStorage.add(new Client( 0, "searchClientTestValue", new Pet("searchClientTestValue")));
+        int lastId = this.hibernateStorage.getClientLastID();
+        int size = this.hibernateStorage.values().size();
+        clients.add(new Client(lastId, "searchClientTestValue", new Pet("searchClientTestValue")));
+        assertNotNull(this.hibernateStorage.searchClient("searchClientTestValue", "searchClientTestValue", "Pet"));
+        assertNotNull( this.hibernateStorage.searchClient("", "searchClientTestValue", "Pet"));
+        assertNotNull( this.hibernateStorage.searchClient("searchClientTestValue", "", "Pet"));
+        assertNotNull( this.hibernateStorage.searchClient("searchClientTestValue", "searchClientTestValue", ""));
+        assertNotNull( this.hibernateStorage.searchClient("searchClientTestValue", "", ""));
+        assertNotNull( this.hibernateStorage.searchClient("", "searchClientTestValue", ""));
+        assertNotEquals(0, this.hibernateStorage.searchClient("", "", "Pet").size());
 
-        this.jdbcStorage.delete(lastId + 1);
-        assertEquals(size, this.jdbcStorage.values().size());
+        this.hibernateStorage.delete(lastId);
+        assertEquals(size - 1, this.hibernateStorage.values().size());
     }
 
     @Test
     public void close() {
-        this.jdbcStorage.close();
+        this.hibernateStorage.close();
     }
 
 }

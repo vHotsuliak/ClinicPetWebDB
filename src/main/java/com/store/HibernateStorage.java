@@ -62,7 +62,7 @@ public class HibernateStorage implements Storage {
      * @param client contains client
      */
     @Override
-    public void add(final Client client) {
+    synchronized public void add(final Client client) {
         client.setId(0);
         addClient(client);
         //it is necessary for the correct connection of the client and the pet

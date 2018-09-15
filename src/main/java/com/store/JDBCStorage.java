@@ -102,7 +102,7 @@ public class JDBCStorage implements Storage {
     }
 
     /**
-     * Add one client to database.
+     * Add one client and his pet to database.
      * @param client contains client's id, name and pet.
      */
     @Override
@@ -142,7 +142,6 @@ public class JDBCStorage implements Storage {
             statement.setString(3, client.getPetName());
             statement.setString(4, client.getKindOfPet());
             statement.executeUpdate();
-            return;
         } catch (SQLException e) {
             e.printStackTrace();
         }

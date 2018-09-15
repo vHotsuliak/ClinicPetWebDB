@@ -86,8 +86,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-08-28.20:59:39.693</IntrospectionTimestamp>
-      <IntrospectionStateNumber>2529</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-09-14.21:37:28.632</IntrospectionTimestamp>
+      <IntrospectionStateNumber>2784</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -151,17 +151,54 @@
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <table id="26" parent="17" name="clients">
+    <table id="26" parent="17" name="cat">
+      <ObjectId>24654</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2783</StateNumber>
+    </table>
+    <table id="27" parent="17" name="clients">
       <ObjectId>24635</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>2529</StateNumber>
     </table>
-    <table id="27" parent="17" name="pets">
+    <table id="28" parent="17" name="dog">
+      <ObjectId>24659</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2784</StateNumber>
+    </table>
+    <table id="29" parent="17" name="pets">
       <ObjectId>24643</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>2529</StateNumber>
+      <StateNumber>2784</StateNumber>
     </table>
-    <column id="28" parent="26" name="user_id">
+    <column id="30" parent="26" name="pet_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2781</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="31" parent="26" name="cat_pkey">
+      <ObjectId>24657</ObjectId>
+      <ColNames>pet_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="32" parent="26" name="cat_pkey">
+      <ObjectId>24658</ObjectId>
+      <ColNames>pet_id</ColNames>
+      <UnderlyingIndexName>cat_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="33" parent="26" name="fkffg0opsjpjat6jvny94d7k3ga">
+      <ObjectId>24664</ObjectId>
+      <ColNames>pet_id</ColNames>
+      <RefTableId>24643</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>pets</RefTableName>
+      <RefKeyName>pets_pkey</RefKeyName>
+      <RefColNames>pet_id</RefColNames>
+    </foreign-key>
+    <column id="34" parent="27" name="user_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -170,24 +207,51 @@
       <TypeId>23</TypeId>
       <SequenceName>clients_user_id_seq</SequenceName>
     </column>
-    <column id="29" parent="26" name="user_nic">
+    <column id="35" parent="27" name="user_nic">
       <Position>2</Position>
       <DataType>varchar(200)|0s</DataType>
       <StateNumber>2528</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="30" parent="26" name="clients_pkey">
+    <index id="36" parent="27" name="clients_pkey">
       <ObjectId>24639</ObjectId>
       <ColNames>user_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="31" parent="26" name="clients_pkey">
+    <key id="37" parent="27" name="clients_pkey">
       <ObjectId>24640</ObjectId>
       <ColNames>user_id</ColNames>
       <UnderlyingIndexName>clients_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="32" parent="27" name="pet_id">
+    <column id="38" parent="28" name="pet_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2782</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="39" parent="28" name="dog_pkey">
+      <ObjectId>24662</ObjectId>
+      <ColNames>pet_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="28" name="dog_pkey">
+      <ObjectId>24663</ObjectId>
+      <ColNames>pet_id</ColNames>
+      <UnderlyingIndexName>dog_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="41" parent="28" name="fko7ej3yghfbft53iyrvpovr365">
+      <ObjectId>24669</ObjectId>
+      <ColNames>pet_id</ColNames>
+      <RefTableId>24643</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>pets</RefTableName>
+      <RefKeyName>pets_pkey</RefKeyName>
+      <RefColNames>pet_id</RefColNames>
+    </foreign-key>
+    <column id="42" parent="29" name="pet_id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -196,37 +260,44 @@
       <TypeId>23</TypeId>
       <SequenceName>pets_pet_id_seq</SequenceName>
     </column>
-    <column id="33" parent="27" name="client_id">
+    <column id="43" parent="29" name="client_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2529</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="34" parent="27" name="nic">
+    <column id="44" parent="29" name="nic">
       <Position>3</Position>
       <DataType>varchar(200)|0s</DataType>
       <StateNumber>2529</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="35" parent="27" name="kind_of_pet">
+    <column id="45" parent="29" name="kind_of_pet">
       <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
       <StateNumber>2529</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="36" parent="27" name="pets_pkey">
+    <column id="46" parent="29" name="dtype">
+      <Position>5</Position>
+      <DataType>varchar(31)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2745</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="47" parent="29" name="pets_pkey">
       <ObjectId>24647</ObjectId>
       <ColNames>pet_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="37" parent="27" name="pets_pkey">
+    <key id="48" parent="29" name="pets_pkey">
       <ObjectId>24648</ObjectId>
       <ColNames>pet_id</ColNames>
       <UnderlyingIndexName>pets_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="38" parent="27" name="pets_client_id_fkey">
+    <foreign-key id="49" parent="29" name="pets_client_id_fkey">
       <ObjectId>24649</ObjectId>
       <ColNames>client_id</ColNames>
       <RefTableId>24635</RefTableId>
