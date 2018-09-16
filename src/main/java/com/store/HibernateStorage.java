@@ -51,7 +51,7 @@ public class HibernateStorage implements Storage {
                    for (Pet pet : pets)
                        if (client.getId() == pet.getOwnerID()) {
                            client.setPet(pet);
-                           continue;
+                           break;
                        }
                return clients;});
     }

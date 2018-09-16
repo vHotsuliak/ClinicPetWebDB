@@ -86,8 +86,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-09-15.22:45:20.278</IntrospectionTimestamp>
-      <IntrospectionStateNumber>2784</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-09-16.19:12:18.467</IntrospectionTimestamp>
+      <IntrospectionStateNumber>3283</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -215,25 +215,18 @@
       <StateNumber>2529</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="36" parent="27" name="dtype">
-      <Position>5</Position>
-      <DataType>varchar(31)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>2745</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="37" parent="27" name="pets_pkey">
+    <index id="36" parent="27" name="pets_pkey">
       <ObjectId>24647</ObjectId>
       <ColNames>pet_id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="38" parent="27" name="pets_pkey">
+    <key id="37" parent="27" name="pets_pkey">
       <ObjectId>24648</ObjectId>
       <ColNames>pet_id</ColNames>
       <UnderlyingIndexName>pets_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="39" parent="27" name="pets_client_id_fkey">
+    <foreign-key id="38" parent="27" name="pets_client_id_fkey">
       <ObjectId>24649</ObjectId>
       <ColNames>client_id</ColNames>
       <RefTableId>24635</RefTableId>

@@ -23,7 +23,7 @@ public class JDBCStorage implements Storage {
 
     //Insert
     private final String INSERT_CLIENT                  = "INSERT into clients VALUES ( ?, ?)";
-    private final String INSERT_PET                     = "INSERT into pets VALUES ( ?, ?, ?, ?)";
+    private final String INSERT_PET                     = "INSERT into pets VALUES ( ?, ?, ?, ?, 'Pet')";
 
     // Delete
     private final String DELETE_PET                     = "Delete From Pets where client_id = ?";
