@@ -7,4 +7,4 @@ Project realized for the administrator, which can: add the clients, search clien
 
 Purpose
 --------------------------------------------------------------------
-Understand how to use memory storage and database( JDBC and Hibernate). Make it so that the transition from one implementation to the other does not cause errors.
+Understand how to use memory storage and database(JDBC and Hibernate connection). Make it so that the transition from one implementation to the other does not cause errors.
