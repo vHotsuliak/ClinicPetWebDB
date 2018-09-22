@@ -10,6 +10,7 @@
 <head>
     <title>Search client</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Style.css">
+    <script src="/js/client/ClientSearcch.js"></script>
 </head>
 <body>
     <div>
@@ -17,7 +18,7 @@
     </div>
 
     <div>
-        <form action="${pageContext.servletContext.contextPath}/client/search" method="get">
+        <form action="${pageContext.servletContext.contextPath}/client/search" method="get" onsubmit="submitCheck()">
             Client name:<br>
             <input type="text" name="clientName"><br>
             Pet name:<br>
@@ -30,7 +31,7 @@
 
     <c:choose>
         <c:when test="${clients != null && clients.size() > 0}">
-            <table border="2px">
+            <table border="2px" id="table_1">
                 <tr>
                     <th>Client name</th>
                     <th>Pet name</th>
@@ -50,7 +51,7 @@
             </table>
         </c:when>
         <c:otherwise>
-            <h3>Not found</h3>
+            <h3 id="forResult">Not found</h3>
         </c:otherwise>
     </c:choose>
 </body>

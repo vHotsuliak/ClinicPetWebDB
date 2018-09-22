@@ -6,10 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment="JDBC">
+    <list default="true" id="7a2a01ae-da18-4d2e-83f8-9e3ee24cce77" name="Default" comment=".jsp">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/client/ClientSearcch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/client/AddClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/client/AddClient.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/client/EditClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/client/EditClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/client/SearchClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/client/SearchClient.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -163,7 +163,8 @@
           <entry key="html" value="5" />
           <entry key="iml" value="1" />
           <entry key="java" value="174" />
-          <entry key="jsp" value="16" />
+          <entry key="js" value="1" />
+          <entry key="jsp" value="17" />
           <entry key="md" value="2" />
           <entry key="pets" value="21" />
           <entry key="properties" value="4" />
@@ -178,7 +179,8 @@
           <entry key="HTML" value="5" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="174" />
-          <entry key="JSP" value="16" />
+          <entry key="JSP" value="17" />
+          <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="2" />
           <entry key="Properties" value="4" />
           <entry key="SQL" value="4" />
@@ -190,17 +192,19 @@
         <counts>
           <entry key="cell" value="35" />
           <entry key="java" value="5772" />
-          <entry key="jsp" value="89" />
+          <entry key="js" value="173" />
+          <entry key="jsp" value="158" />
           <entry key="sql" value="33" />
-          <entry key="txt" value="246" />
+          <entry key="txt" value="253" />
           <entry key="xml" value="195" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="5772" />
-          <entry key="JSP" value="89" />
-          <entry key="PLAIN_TEXT" value="246" />
+          <entry key="JSP" value="158" />
+          <entry key="JavaScript" value="173" />
+          <entry key="PLAIN_TEXT" value="253" />
           <entry key="SQL" value="33" />
           <entry key="Scratch" value="35" />
           <entry key="XML" value="195" />
@@ -222,7 +226,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/views/client/EditClient.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
@@ -232,22 +236,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/store/HibernateStorage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/client/SearchClient.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="690">
+              <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/store/JDBCStorageTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/client/ClientSearcch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="58" column="68" selection-start-line="58" selection-start-column="68" selection-end-line="58" selection-end-column="68" />
+            <state relative-caret-position="34">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -311,10 +315,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JavaScript File" />
         <option value="Tag Library Descriptor" />
         <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -347,7 +351,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/store/UserStorage.java" />
         <option value="$PROJECT_DIR$/target/classes/parsentev.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/servlets/AddClientServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/servlets/ClientViewServlet.java" />
@@ -389,7 +392,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/models/pets/Cat.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/pets/Dog.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/client/SearchClient.jsp" />
         <option value="$PROJECT_DIR$/src/test/java/com/store/HibernateStorageTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/models/pets/Pet.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/store/JDBCStorageTest.java" />
@@ -398,6 +400,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/store/UserCache.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/client/AddClient.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/client/EditClient.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/client/SearchClient.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/client/ClientSearcch.js" />
       </list>
     </option>
   </component>
@@ -899,6 +903,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClinicPetWebDB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClinicPetWebDB" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -970,7 +983,7 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537639758645" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537649269985" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -1317,7 +1330,7 @@
       <workItem from="1537118804230" duration="3953000" />
       <workItem from="1537462549484" duration="49000" />
       <workItem from="1537462814786" duration="97000" />
-      <workItem from="1537634183265" duration="1604000" />
+      <workItem from="1537634183265" duration="5818000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1533758420274</created>
@@ -1571,7 +1584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537122179115</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary=".jsp">
+      <created>1537639796893</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1537639796893</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1607,7 +1627,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="424865000" />
+    <option name="totallyTimeSpent" value="429079000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1651,12 +1671,12 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.49919224" visible="true" weight="0.14285715" />
+      <window_info anchor="right" id="Maven Projects" order="4" sideWeight="0.49757674" visible="true" weight="0.14285715" />
       <window_info anchor="right" id="Database" order="5" weight="0.12686567" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" x="0" y="0" width="203" height="847" id="Documentation" order="9" sideWeight="0.50080776" side_tool="true" weight="0.14285715" />
+      <window_info anchor="right" x="0" y="0" width="203" height="847" id="Documentation" order="9" sideWeight="0.5024233" side_tool="true" weight="0.14285715" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1702,7 +1722,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PreparedStatement" />
     <MESSAGE value="JDBCStorageTest" />
     <MESSAGE value="annotation" />
     <MESSAGE value="Create Demo" />
@@ -1727,7 +1746,8 @@
     <MESSAGE value="HibernateStorageTest re" />
     <MESSAGE value="JDBCStorage" />
     <MESSAGE value="JDBC" />
-    <option name="LAST_COMMIT_MESSAGE" value="JDBC" />
+    <MESSAGE value=".jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value=".jsp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1790,7 +1810,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/models/Bank.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Bank.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Client.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Demo.java">
@@ -1913,13 +1932,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/client/SearchClient.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/parsentev.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -2112,6 +2124,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="24" column="89" lean-forward="true" selection-start-line="24" selection-start-column="89" selection-end-line="24" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/client/SearchClient.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/client/ClientSearcch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
