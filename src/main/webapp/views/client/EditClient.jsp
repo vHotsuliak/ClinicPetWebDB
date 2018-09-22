@@ -20,9 +20,9 @@
     <div class="div-form-center">
         <form action="${pageContext.servletContext.contextPath}/client/edit" method="post" class="center-form">
             Client name:<br>
-            <input type="text" name="clientName" value="${client.clientName}"><br>
+            <input type="text" name="clientName" value="${client.clientName}" required><br>
             Pet name:<br>
-            <input type="text" name="petName" value="${client.petName}"><br><br>
+            <input type="text" name="petName" value="${client.petName}" required><br><br>
             Kind of pet:<br/>
             <select size = "1" required size = "1" name = "kindOfPet">
                 <option value = "Pet">Pet</option>

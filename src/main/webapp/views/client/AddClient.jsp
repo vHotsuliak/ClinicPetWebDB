@@ -19,9 +19,9 @@
     <div class="div-form-center">
         <form action="${pageContext.servletContext.contextPath}/client/add" method="post">
         Client name:<br>
-        <input type="text" name="clientName" value="Client's name"><br>
+        <input type="text" name="clientName" value="Client's name" required><br>
         Pet name:<br>
-        <input type="text" name="petName" value="Pet's name"><br><br>
+        <input type="text" name="petName" begraundV="Pet's name" required><br><br>
         <select size = "1" required size = "1" name = "kindOfPet">
             <option value = "Pet">Pet</option>
             <option value = "Cat">Cat</option>
