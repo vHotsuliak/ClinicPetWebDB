@@ -2,15 +2,17 @@
   Created by IntelliJ IDEA.
   User: Vasyl Gotsuliak
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false"%>
 <%--@elvariable id="clients" type="java.util.List"--%>
+<%--suppress HtmlFormInputWithoutLabel --%>
 <html>
 <head>
     <title>Search client</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Style.css">
-    <script src="/js/client/ClientSearcch.js"></script>
+    <%-- If don't use jstl then script not working--%>
+    <script src="<c:url value="/js/client/ClientSearch.js"/>"></script>
 </head>
 <body>
     <div>
@@ -20,11 +22,11 @@
     <div>
         <form action="${pageContext.servletContext.contextPath}/client/search" method="get" onsubmit="submitCheck()">
             Client name:<br>
-            <input type="text" name="clientName"><br>
+            <input type="text" name="clientName" id="clientName"><br>
             Pet name:<br>
-            <input type="text" name="petName"><br><br>
+            <input type="text" name="petName" id="petName"><br><br>
             Kind of pet:<br>
-            <input type="text" name="kindOfPet"><br><br>
+            <input type="text" name="kindOfPet" id="kindOfPet"><br><br>
             <input type="submit" value="Search">
         </form>
     </div>
@@ -51,7 +53,9 @@
             </table>
         </c:when>
         <c:otherwise>
-            <h3 id="forResult">Not found</h3>
+            <h3 id="forResult" style="background-color: yellowgreen">
+                <c:if test="${clients.size() == 0}">Not found</c:if>
+            </h3>
         </c:otherwise>
     </c:choose>
 </body>

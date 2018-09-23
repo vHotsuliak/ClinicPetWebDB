@@ -195,6 +195,8 @@ public class AVCDESClientServletsTest extends Mockito {
 
         AddClientServlet addClientServlet = new AddClientServlet();
 
+        lastId  = this.USER_CACHE.getClientLastID();
+
         when(request.getParameter("clientName")).thenReturn("test0");
         when(request.getParameter("petName")).thenReturn("test0");
         when(request.getParameter("kindOfPet")).thenReturn("Dog");
@@ -205,7 +207,7 @@ public class AVCDESClientServletsTest extends Mockito {
         verify(response, atLeast(0)).sendRedirect(String.format("%s%s", request.getContextPath(), "/client/view"));
 
         addClientServlet.doPost(request, response);
-        this.USER_CACHE.delete(lastId + 1);
+        this.USER_CACHE.delete(lastId);
     }
 
     @Test
